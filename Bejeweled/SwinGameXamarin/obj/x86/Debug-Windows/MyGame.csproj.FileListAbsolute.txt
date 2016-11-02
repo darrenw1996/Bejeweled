@@ -1,0 +1,179 @@
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\animations\startup.txt
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\bundles\FileDialog.txt
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\bundles\splash.txt
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\fonts\arial.ttf
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\fonts\cour.ttf
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\fdFile.png
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\fdFolder.png
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Active.png
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Background.png
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Inactive.png
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Scroll.png
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\Swinburne.jpg
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\SwinGameAni.png
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\panels\FileDialog.txt
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\sounds\error.wav
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\sounds\SwinGameStart.wav
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\SwinGame.icns
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\SwinGame.ico
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\MyGame.exe
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\SwinGame.dll
+C:\Users\FU\Documents\Projects\SwinGameXamarin\obj\x86\Debug-Windows\MyGame.exe
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\animations\startup.txt
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\bundles\FileDialog.txt
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\bundles\splash.txt
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\arial.ttf
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\cour.ttf
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\fdFile.png
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\fdFolder.png
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Active.png
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Background.png
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Inactive.png
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Scroll.png
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\Swinburne.jpg
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\SwinGameAni.png
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\panels\FileDialog.txt
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\sounds\error.wav
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\sounds\SwinGameStart.wav
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\SwinGame.icns
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\SwinGame.ico
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\MyGame.exe
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\SwinGame.dll
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\obj\x86\Debug-Windows\MyGame.exe
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\nunit.framework.dll
+G:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\nunit.framework.xml
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\animations\startup.txt
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\bundles\FileDialog.txt
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\bundles\splash.txt
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\arial.ttf
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\cour.ttf
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\fdFile.png
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\fdFolder.png
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Active.png
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Background.png
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Inactive.png
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Scroll.png
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\Swinburne.jpg
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\SwinGameAni.png
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\panels\FileDialog.txt
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\sounds\error.wav
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\sounds\SwinGameStart.wav
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\SwinGame.icns
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\SwinGame.ico
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\MyGame.exe
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\nunit.framework.dll
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\SwinGame.dll
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\nunit.framework.xml
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+E:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\obj\x86\Debug-Windows\MyGame.exe
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\animations\startup.txt
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\bundles\FileDialog.txt
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\bundles\splash.txt
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\arial.ttf
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\cour.ttf
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\fdFile.png
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\fdFolder.png
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Active.png
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Background.png
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Inactive.png
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Scroll.png
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\Swinburne.jpg
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\SwinGameAni.png
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\panels\FileDialog.txt
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\sounds\error.wav
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\sounds\SwinGameStart.wav
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\SwinGame.icns
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\Resources\SwinGame.ico
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\MyGame.exe
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\nunit.framework.dll
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\SwinGame.dll
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\bin\Debug\nunit.framework.xml
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+F:\2016-Swinburne\Code\Bejeweled\SwinGameXamarin\obj\x86\Debug-Windows\MyGame.exe
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\animations\startup.txt
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\bundles\FileDialog.txt
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\bundles\splash.txt
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\arial.ttf
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\cour.ttf
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\fdFile.png
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\fdFolder.png
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Active.png
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Background.png
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Inactive.png
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Scroll.png
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\Swinburne.jpg
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\SwinGameAni.png
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\panels\FileDialog.txt
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\sounds\error.wav
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\sounds\SwinGameStart.wav
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\SwinGame.icns
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\SwinGame.ico
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\MyGame.exe
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\nunit.framework.dll
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\SwinGame.dll
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\bin\Debug\nunit.framework.xml
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+G:\2016-Swinburne\Code\TestingBejeweled\Bejeweled\SwinGameXamarin\obj\x86\Debug-Windows\MyGame.exe
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\animations\startup.txt
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\bundles\FileDialog.txt
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\bundles\splash.txt
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\arial.ttf
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\cour.ttf
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\fdFile.png
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\fdFolder.png
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Active.png
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Background.png
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Inactive.png
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Scroll.png
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\Swinburne.jpg
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\SwinGameAni.png
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\panels\FileDialog.txt
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\sounds\error.wav
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\sounds\SwinGameStart.wav
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\SwinGame.icns
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\SwinGame.ico
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\MyGame.exe
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\nunit.framework.dll
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\SwinGame.dll
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\nunit.framework.xml
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+F:\2016-Swinburne\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\obj\x86\Debug-Windows\MyGame.exe
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\animations\startup.txt
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\bundles\FileDialog.txt
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\bundles\splash.txt
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\arial.ttf
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\cour.ttf
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\fdFile.png
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\fdFolder.png
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Active.png
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Background.png
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Inactive.png
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Scroll.png
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\Swinburne.jpg
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\SwinGameAni.png
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\panels\FileDialog.txt
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\sounds\error.wav
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\sounds\SwinGameStart.wav
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\SwinGame.icns
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\Resources\SwinGame.ico
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\MyGame.exe
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\nunit.framework.dll
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\SwinGame.dll
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\bin\Debug\nunit.framework.xml
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+G:\2016-Swinburne\Degree Year 1 Sem 2\Code\COS20007 Portfolio 4334078_Lo\CustomProgram\Bejeweled\SwinGameXamarin\obj\x86\Debug-Windows\MyGame.exe
