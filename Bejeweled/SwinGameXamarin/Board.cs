@@ -77,13 +77,14 @@ namespace MyGame
 
 		public void DrawBoard()
 		{
-			for (int x = 0; x < 9; x++)
+			/*for (int x = 0; x < 9; x++)
 			{
 				for (int y = 0; y < 9; y++)
 				{
 					_blocks [x, y].Draw ();
 				}
-			}
+			}*/
+			UIController.DrawGameBoard (_blocks);
 		}
 
 		public void Swap(ColorBlock firstSelected, ColorBlock secondSelected)

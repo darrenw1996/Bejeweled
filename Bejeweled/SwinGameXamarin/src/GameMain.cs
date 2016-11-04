@@ -10,6 +10,7 @@ namespace MyGame
         {
             //Open the game window
 			SwinGame.OpenGraphicsWindow("Bejeweled", 549, 700); 
+			UIController.LoadResources ();
 
 			bool startGame = false;   
 			bool endGame = false;    //display final score page
@@ -233,7 +234,7 @@ namespace MyGame
 				}
                 
 				SwinGame.RefreshScreen(60);
-
+				SwinGame.UpdateAllSprites ();
             }
 
 
