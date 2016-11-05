@@ -32,6 +32,8 @@ namespace MyGame
 			{
 				sprite = "greenDiamond";
 			}
+			//SwinGame.FillRectangle (Color.Maroon, X, Y, Width, Height);
+			//SwinGame.FillRectangle (Color.SaddleBrown, X+5, Y+5, Width-10, Height-10);
 
 			SwinGame.SpriteSetX (UIController.getSprite (sprite), X+10);
 			SwinGame.SpriteSetY (UIController.getSprite (sprite), Y+15);

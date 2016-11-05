@@ -1,10 +1,14 @@
 ﻿<Properties StartupItem="MyGame.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Board.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UIController.cs">
     <Files>
-      <File FileName="src\GameMain.cs" Line="14" Column="4" />
-      <File FileName="UIController.cs" Line="69" Column="1" />
-      <File FileName="Board.cs" Line="87" Column="41" />
+      <File FileName="src\GameMain.cs" Line="1" Column="1" />
+      <File FileName="UIController.cs" Line="66" Column="57" />
+      <File FileName="Board.cs" Line="1" Column="1" />
+      <File FileName="YellowBlock.cs" Line="1" Column="1" />
+      <File FileName="GreenBlock.cs" Line="1" Column="1" />
+      <File FileName="BlueBlock.cs" Line="1" Column="1" />
+      <File FileName="RedBlock.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
