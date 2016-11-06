@@ -17,11 +17,13 @@ namespace MyGame
 		public static void LoadImages()
 		{
 			_Background = SwinGame.LoadBitmap ("background.jpg");
+
 		}
 
 		private static void LoadBundles()
 		{
 			SwinGame.LoadResourceBundle("diamondbundle.txt");
+			SwinGame.LoadResourceBundle ("destroyedbundle.txt");
 		}
 
 		private static void LoadSprites()
@@ -162,6 +164,7 @@ namespace MyGame
 			{
 				SwinGame.FreeSprite (s);
 			}
+			SwinGame.ReleaseResourceBundle ("destroyedbundle.txt");
 			SwinGame.ReleaseResourceBundle ("diamondbundle.txt");
 			SwinGame.FreeBitmap (_Background);
 			SwinGame.ReleaseAllResources ();

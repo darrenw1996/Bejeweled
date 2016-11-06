@@ -1,0 +1,2 @@
+BITMAP,destroyedani,destroyed.png, 100,100, 5, 4, 20
+ANIM,destroyedanimation,destroyedanimation.txt

@@ -15,7 +15,7 @@ namespace MyGame
 			bool startGame = false;   
 			bool endGame = false;    //display final score page
 			bool instruction = false;  //instruction page
-			Timer gameTime = SwinGame.CreateTimer();	//game time
+			Timer gameTime = SwinGame.CreateTimer("timer");	//game time
 			uint ticks;   //timer ticks
 
 
@@ -145,7 +145,7 @@ namespace MyGame
 					}
 
 
-					myBoard.GenerateBlock ();
+					myBoard.GenerateBlock2 ();
 
 				}
 

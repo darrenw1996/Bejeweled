@@ -46,6 +46,76 @@ namespace MyGame
 				
 		}
 
+		public void GenerateBlock2()
+		{
+			List<ColorBlock> colorBlocks = new List<ColorBlock> ();
+			BlockFactory myFactory = new BlockFactory ();
+			int a = 12, b = 12; //a for x position, b for y position of blocks
+
+			while(b < 500){
+
+				for (int x = 0; x < 9; x++)
+				{
+					for (int y = 0; y < 9; y++)
+					{
+						if (_blocks[x, y] == null || _blocks [x, y].Color == Color.Black)
+						{
+
+
+
+
+							AddBlock (x, y, myFactory.CreateRandBlock (a, b));
+
+							colorBlocks.Add (_blocks [x, y]);
+
+
+
+						}
+
+						//increment x position
+						a += 59;
+					}
+
+					//reset x position to 12 and increment y position
+					a = 12;
+					b += 69;
+				}
+			}
+			List<Sprite> _destroyedSprites = new List<Sprite> ();
+			Sprite sprite =SwinGame.CreateSprite (SwinGame.BitmapNamed ("destroyedani"), SwinGame.AnimationScriptNamed ("destroyedanimation"));
+			foreach (ColorBlock block in colorBlocks)
+			{
+				sprite = SwinGame.CreateSprite (SwinGame.BitmapNamed ("destroyedani"), SwinGame.AnimationScriptNamed ("destroyedanimation"));
+				SwinGame.SpriteStartAnimation (sprite, "dematerialize");
+				SwinGame.SpriteSetX (sprite, block.X-20);
+				SwinGame.SpriteSetY (sprite, block.Y-15);
+				_destroyedSprites.Add (sprite);
+
+
+			}
+
+			if (!sprite.AnimationHasEnded)
+			{
+				SwinGame.PauseTimer("timer");
+			}
+
+			do
+			{
+				SwinGame.DrawAllSprites();
+
+				SwinGame.RefreshScreen(60);
+				SwinGame.UpdateAllSprites();
+			} while(!sprite.AnimationHasEnded);
+
+			if (sprite.AnimationHasEnded)
+			{
+				SwinGame.ResumeTimer("timer");
+			}
+
+
+		}
+
+
 		public void AddBlock(int x, int y, ColorBlock block)
 		{
 			_blocks [x, y] = block;
