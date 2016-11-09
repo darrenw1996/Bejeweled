@@ -1,2 +1,4 @@
 language: csharp
 solution: Bejeweled/SwinGameXamarin/MyGame.sln
+script:
+  -xbuild /p:Configuration=Debug Bejeweled/SwinGameXamarin/MyGame.sln
