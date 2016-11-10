@@ -144,6 +144,32 @@ namespace MyGame
 						myBoard.Swap (firstSelected, secondSelected);	
 					}
 
+					/* JOSEPH - check if match horizontally or vertically 
+					if (myBoard.CheckMatchingHorizontal ()) {
+						Sprite firstSprite = firstSelected.Sprite;
+						Sprite secondSprite = secondSelected.Sprite;
+
+						SwinGame.SpriteSetDX (firstSprite, 0);
+						SwinGame.SpriteSetDY (firstSprite, 0);
+						SwinGame.SpriteSetDX (secondSprite, 0);
+						SwinGame.SpriteSetDY (secondSprite, 0);
+
+						myBoard.SwapAnimation(firstSprite, 0, -20);
+						myBoard.SwapAnimation(secondSprite, 0, +20);
+					} 
+					if (myBoard.CheckMatchingVertical ()) { 
+						Sprite firstSprite = firstSelected.Sprite;
+						Sprite secondSprite = secondSelected.Sprite;
+
+						SwinGame.SpriteSetDX (firstSprite, 0);
+						SwinGame.SpriteSetDY (firstSprite, 0);
+						SwinGame.SpriteSetDX (secondSprite, 0);
+						SwinGame.SpriteSetDY (secondSprite, 0);
+
+						myBoard.SwapAnimation (firstSprite, -20, 0);
+						myBoard.SwapAnimation (secondSprite, +20, 0);
+					}
+					*/
 
 					myBoard.GenerateBlock2 ();
 

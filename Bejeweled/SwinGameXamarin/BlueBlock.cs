@@ -18,18 +18,21 @@ namespace MyGame
 
 			//SwinGame.FillRectangle (Color, X, Y, Width, Height);
 			string sprite = "";
-			if (Color == Color.Yellow)
+			if (Color == Color.Yellow) 
 			{
+				sprite = "diamondyellow";
 				sprite = "yellowDiamond";
-			}
-			else if (Color == Color.Red)
+			} else if (Color == Color.Red)
 			{
+				sprite = "diamondred";
 				sprite = "redDiamond";
-			} else if (Color == Color.Blue)
+			} else if (Color == Color.Blue) 
 			{
+				sprite = "diamondblue";
 				sprite = "blueDiamond";
-			} else if (Color == Color.Green)
+			} else if (Color == Color.Green) 
 			{
+				sprite = "diamondgreen";
 				sprite = "greenDiamond";
 			}
 			//SwinGame.FillRectangle (Color.Maroon, X, Y, Width, Height);
@@ -37,6 +40,11 @@ namespace MyGame
 
 			SwinGame.SpriteSetX (UIController.getSprite (sprite), X+10);
 			SwinGame.SpriteSetY (UIController.getSprite (sprite), Y+15);
+			//Sprite = SwinGame.CreateSprite (SwinGame.BitmapNamed (sprite), SwinGame.AnimationScriptNamed ("diamondanimation"));
+			//SwinGame.SpriteSetX (Sprite, X + 10);
+			//SwinGame.SpriteSetY (Sprite, Y + 15);
+			//SwinGame.DrawSprite (Sprite);
+			Sprite = UIController.getSprite (sprite);
 			SwinGame.DrawSprite (UIController.getSprite (sprite));
 		}
 	}

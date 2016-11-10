@@ -9,6 +9,7 @@ namespace MyGame
 		private float _x, _y;
 		private int _width, _height;
 		private bool _selected;
+		private Sprite _sprite;
 
 		public ColorBlock (float x, float y, Color color)
 		{
@@ -74,6 +75,16 @@ namespace MyGame
 
 		public abstract void Draw();
 
+		/* JOSEPH - Sprite getter and setter*/
+		public Sprite Sprite
+		{ 
+			get { return _sprite; }
+			set { _sprite = value; }
+		}
+
+		public void freeSprite(Sprite sprt) {
+			SwinGame.FreeSprite (sprt);
+		}
 	}
 }
 
