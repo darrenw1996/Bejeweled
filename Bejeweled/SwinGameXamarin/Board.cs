@@ -189,48 +189,62 @@ namespace MyGame
 								//Sprite firstSprite = firstSelected.Sprite;
 								//Sprite secondSprite = secondSelected.Sprite;
 
-							if (((y >= 1 && _blocks [x, y - 1] == secondSelected) || (y <= 7 && _blocks [x, y + 1] == secondSelected))) {
+							if (((y >= 1 && _blocks [x, y - 1] == secondSelected) || (y <= 7 && _blocks [x, y + 1] == secondSelected)) && secondSelected.Selected) {
 
 								SwinGame.SpriteSetX (firstSelected.Sprite, firstSelected.X+10);
 								SwinGame.SpriteSetY (firstSelected.Sprite, firstSelected.Y+15);
 								SwinGame.SpriteSetX (secondSelected.Sprite, secondSelected.X+10);
 								SwinGame.SpriteSetY (secondSelected.Sprite, secondSelected.Y+15);
 
-								SwinGame.SpriteSetDX (firstSelected.Sprite, 0);
-								SwinGame.SpriteSetDY (firstSelected.Sprite, 0);
-								SwinGame.SpriteSetDX (secondSelected.Sprite, 0);
-								SwinGame.SpriteSetDY (secondSelected.Sprite, 0);
+								SwinGame.ProcessEvents ();
+								SwinGame.DrawFramerate (0,0);
 
-								SwapAnimation (firstSelected.Sprite, -10, 0);
-								SwapAnimation (secondSelected.Sprite, +10, 0);
+								SwinGame.DrawSprite (firstSelected.Sprite);
+								SwinGame.UpdateAllSprites ();
+								SwinGame.DrawSprite (secondSelected.Sprite);
+								SwinGame.UpdateAllSprites ();
 
+								SwinGame.RefreshScreen (60);
+
+								SwinGame.SpriteSetDX (firstSelected.Sprite, 10);
+								SwinGame.SpriteSetDY (firstSelected.Sprite, 10);
+								SwinGame.SpriteSetDX (secondSelected.Sprite, 10);
+								SwinGame.SpriteSetDY (secondSelected.Sprite, 10);
+
+								SwapAnimation (firstSelected.Sprite, -1, 0);
+								SwapAnimation (secondSelected.Sprite, +1, 0);
+								break;
 								//SwinGame.UpdateSprite (firstSelected.Sprite);
 								//SwinGame.UpdateSprite (secondSelected.Sprite);
 							} 
-							if (((x >= 1 && _blocks [x - 1, y] == secondSelected) || (x <= 7 && _blocks [x + 1, y] == secondSelected))) {
+							if (((x >= 1 && _blocks [x - 1, y] == secondSelected) || (x <= 7 && _blocks [x + 1, y] == secondSelected)) && secondSelected.Selected) {
 								SwinGame.SpriteSetX (firstSelected.Sprite, firstSelected.X+10);
 								SwinGame.SpriteSetY (firstSelected.Sprite, firstSelected.Y+15);
 								SwinGame.SpriteSetX (secondSelected.Sprite, secondSelected.X+10);
 								SwinGame.SpriteSetY (secondSelected.Sprite, secondSelected.Y+15);
 
-								SwinGame.SpriteSetDX (firstSelected.Sprite, 0);
-								SwinGame.SpriteSetDY (firstSelected.Sprite, 0);
-								SwinGame.SpriteSetDX (secondSelected.Sprite, 0);
-								SwinGame.SpriteSetDY (secondSelected.Sprite, 0);
+								SwinGame.SpriteSetDX (firstSelected.Sprite, 10);
+								SwinGame.SpriteSetDY (firstSelected.Sprite, 10);
+								SwinGame.SpriteSetDX (secondSelected.Sprite, 10);
+								SwinGame.SpriteSetDY (secondSelected.Sprite, 10);
 
-								SwapAnimation (firstSelected.Sprite, 0, -10);
-								SwapAnimation (secondSelected.Sprite, 0, +10);
-
+								SwapAnimation (firstSelected.Sprite, 0, -1);
+								SwapAnimation (secondSelected.Sprite, 0, +1);
+								break;
 								//SwinGame.UpdateSprite (firstSelected.Sprite);
 								//SwinGame.UpdateSprite (secondSelected.Sprite);
 							}
-
 
 						}
 					}
 				}
 			}
 
+		}
+
+		public void MoveSprite ()
+		{
+			
 		}
 
 		public void SwapAnimation (Sprite sprt, float dx, float dy)

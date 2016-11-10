@@ -170,7 +170,9 @@ namespace MyGame
 						myBoard.SwapAnimation (secondSprite, +20, 0);
 					}
 					*/
-
+					//if (SwinGame.MouseClicked (MouseButton.RightButton) || SwinGame.MouseClicked (MouseButton.LeftButton)) {
+						//myBoard.MoveSprite (firstSelected, secondSelected);
+					//}
 					myBoard.GenerateBlock2 ();
 
 				}
