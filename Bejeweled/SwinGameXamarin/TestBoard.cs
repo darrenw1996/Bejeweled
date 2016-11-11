@@ -36,7 +36,7 @@ namespace MyGame
 			}
 			//remove 4 blocks 
 			board.RemoveBlock (clusters);
-			board.CalScore ();
+			board.CalScore (4);
 			//check that there are 4 blocks in black color
 			Assert.AreEqual (4, board.Score);
 
@@ -108,7 +108,7 @@ namespace MyGame
 			board.Block [0, 4].Color = Color.Black;
 
 			//check that the score is 2 as there are 2 blocks in black
-			board.CalScore ();
+			board.CalScore (2);
 			Assert.AreEqual (2, board.Score);
 		}
 	}

@@ -8,7 +8,8 @@ namespace MyGame
 	public class Board
 	{
 		private ColorBlock[,] _blocks; 
-		private int _score;
+		private int _score, _scoreRed=4, _scoreBlue=3, _scoreGreen=2, _scoreYellow=1, _matchCount=1;
+		private bool _matchRed=false, _matchBlue=false, _matchGreen=false, _matchYellow=false;
 
 		public Board ()
 		{
@@ -131,6 +132,20 @@ namespace MyGame
 					{
 						if (_blocks [x, y] == block)
 						{
+							/* JOSEPH - different score for different colored diamonds */
+							if (_blocks [x, y].Color == Color.Red) {
+								_matchRed = true;
+							}
+							if (_blocks [x, y].Color == Color.Blue) {
+								_matchBlue = true;
+							}
+							if (_blocks [x, y].Color == Color.Green) {
+								_matchGreen = true;
+							}
+							if (_blocks [x, y].Color == Color.Yellow) {
+								_matchYellow = true;
+							}
+
 							_blocks [x, y].Color = Color.Black;
 						}
 					}
@@ -260,6 +275,9 @@ namespace MyGame
 						//if matching is greater than or equal to 3, add it into the clusters list
 						if (match >= 3)
 						{
+							/* JOSEPH - match count */
+							_matchCount = match;
+
 							for (int i = 0; i < match; i++)
 							{
 								clusters.Add (_blocks [y - i, x]);
@@ -281,13 +299,13 @@ namespace MyGame
 			else
 			{
 				RemoveBlock (clusters);
-				CalScore ();
+				CalScore (_matchCount);
 				return true;
 			}
 
 		}
 
-		public void CalScore()
+		public void CalScore(int mCount)
 		{
 
 			for (int x = 0; x < 9; x++)
@@ -296,7 +314,29 @@ namespace MyGame
 				{
 					if (_blocks [x, y].Color == Color.Black)
 					{
-						_score++;
+						//_score++;
+
+						/* JOSEPH - different score for different colored diamonds */
+						if (_matchRed == true) {
+							_score = _score + _scoreRed * mCount;
+							_matchRed = false;
+							_matchCount = 1;
+						}
+						if (_matchBlue == true) {
+							_score = _score + _scoreBlue * mCount;
+							_matchBlue = false;
+							_matchCount = 1;
+						}
+						if (_matchGreen == true) {
+							_score = _score + _scoreGreen * mCount;
+							_matchGreen = false;
+							_matchCount = 1;
+						}
+						if (_matchYellow == true) {
+							_score = _score + _scoreYellow * mCount;
+							_matchYellow = false;
+							_matchCount = 1;
+						}
 					}
 				}
 			}
