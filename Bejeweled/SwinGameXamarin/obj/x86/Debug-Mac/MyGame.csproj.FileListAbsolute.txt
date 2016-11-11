@@ -24,3 +24,5 @@ C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\SwinGame.dll
 C:\Users\FU\Documents\Projects\SwinGameXamarin\obj\x86\Debug-Mac\MyGame.csprojResolveAssemblyReference.cache
 C:\Users\FU\Documents\Projects\SwinGameXamarin\obj\x86\Debug-Mac\MyGame.exe
 C:\Users\FU\Documents\Projects\SwinGameXamarin\obj\x86\Debug-Mac\MyGame.pdb
+C:\Users\User\Bejeweled\Bejeweled\SwinGameXamarin\obj\x86\Debug-Mac\MyGame.exe
+C:\Users\User\Bejeweled\Bejeweled\SwinGameXamarin\obj\x86\Debug-Mac\MyGame.pdb

@@ -200,6 +200,7 @@ namespace MyGame
 		{
 			List<ColorBlock> clusters = new List<ColorBlock> ();
 			int match = 0;
+			int hMatch = 0, vMatch = 0;
 			bool startCheck = false;
 
 			//check horizontal match
@@ -231,6 +232,10 @@ namespace MyGame
 						//if matching is greater than or equal to 3, add it into the clusters list 
 						if (match >= 3)
 						{
+							/* JOSEPH - horizontal match count */
+							hMatch = match;
+							_matchCount = match + vMatch;
+
 							for (int i = 0; i < match; i++)
 							{
 								clusters.Add(_blocks[x, y-i]);
@@ -275,8 +280,9 @@ namespace MyGame
 						//if matching is greater than or equal to 3, add it into the clusters list
 						if (match >= 3)
 						{
-							/* JOSEPH - match count */
-							_matchCount = match;
+							/* JOSEPH - vertical match count */
+							vMatch = match;
+							_matchCount = match + hMatch;
 
 							for (int i = 0; i < match; i++)
 							{
@@ -299,13 +305,13 @@ namespace MyGame
 			else
 			{
 				RemoveBlock (clusters);
-				CalScore (_matchCount);
+				CalScore ();
 				return true;
 			}
 
 		}
 
-		public void CalScore(int mCount)
+		public void CalScore()
 		{
 
 			for (int x = 0; x < 9; x++)
@@ -318,22 +324,22 @@ namespace MyGame
 
 						/* JOSEPH - different score for different colored diamonds */
 						if (_matchRed == true) {
-							_score = _score + _scoreRed * mCount;
+							_score = _score + _scoreRed * _matchCount;
 							_matchRed = false;
 							_matchCount = 1;
 						}
 						if (_matchBlue == true) {
-							_score = _score + _scoreBlue * mCount;
+							_score = _score + _scoreBlue * _matchCount;
 							_matchBlue = false;
 							_matchCount = 1;
 						}
 						if (_matchGreen == true) {
-							_score = _score + _scoreGreen * mCount;
+							_score = _score + _scoreGreen * _matchCount;
 							_matchGreen = false;
 							_matchCount = 1;
 						}
 						if (_matchYellow == true) {
-							_score = _score + _scoreYellow * mCount;
+							_score = _score + _scoreYellow * _matchCount;
 							_matchYellow = false;
 							_matchCount = 1;
 						}
