@@ -8,7 +8,8 @@ namespace MyGame
 	public class Board
 	{
 		private ColorBlock[,] _blocks; 
-		private int _score;
+		private int _score, _scoreRed=4, _scoreBlue=3, _scoreGreen=2, _scoreYellow=1, _matchCount=1;
+		private bool _matchRed=false, _matchBlue=false, _matchGreen=false, _matchYellow=false;
 
 		public Board ()
 		{
@@ -131,6 +132,20 @@ namespace MyGame
 					{
 						if (_blocks [x, y] == block)
 						{
+							/* JOSEPH - different score for different colored diamonds */
+							if (_blocks [x, y].Color == Color.Red) {
+								_matchRed = true;
+							}
+							if (_blocks [x, y].Color == Color.Blue) {
+								_matchBlue = true;
+							}
+							if (_blocks [x, y].Color == Color.Green) {
+								_matchGreen = true;
+							}
+							if (_blocks [x, y].Color == Color.Yellow) {
+								_matchYellow = true;
+							}
+
 							_blocks [x, y].Color = Color.Black;
 						}
 					}
@@ -185,6 +200,7 @@ namespace MyGame
 		{
 			List<ColorBlock> clusters = new List<ColorBlock> ();
 			int match = 0;
+			int hMatch = 0, vMatch = 0;
 			bool startCheck = false;
 
 			//check horizontal match
@@ -216,6 +232,10 @@ namespace MyGame
 						//if matching is greater than or equal to 3, add it into the clusters list 
 						if (match >= 3)
 						{
+							/* JOSEPH - horizontal match count */
+							hMatch = match;
+							_matchCount = match + vMatch;
+
 							for (int i = 0; i < match; i++)
 							{
 								clusters.Add(_blocks[x, y-i]);
@@ -260,6 +280,10 @@ namespace MyGame
 						//if matching is greater than or equal to 3, add it into the clusters list
 						if (match >= 3)
 						{
+							/* JOSEPH - vertical match count */
+							vMatch = match;
+							_matchCount = match + hMatch;
+
 							for (int i = 0; i < match; i++)
 							{
 								clusters.Add (_blocks [y - i, x]);
@@ -296,7 +320,29 @@ namespace MyGame
 				{
 					if (_blocks [x, y].Color == Color.Black)
 					{
-						_score++;
+						//_score++;
+
+						/* JOSEPH - different score for different colored diamonds */
+						if (_matchRed == true) {
+							_score = _score + _scoreRed * _matchCount;
+							_matchRed = false;
+							_matchCount = 1;
+						}
+						if (_matchBlue == true) {
+							_score = _score + _scoreBlue * _matchCount;
+							_matchBlue = false;
+							_matchCount = 1;
+						}
+						if (_matchGreen == true) {
+							_score = _score + _scoreGreen * _matchCount;
+							_matchGreen = false;
+							_matchCount = 1;
+						}
+						if (_matchYellow == true) {
+							_score = _score + _scoreYellow * _matchCount;
+							_matchYellow = false;
+							_matchCount = 1;
+						}
 					}
 				}
 			}
