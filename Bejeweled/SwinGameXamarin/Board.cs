@@ -8,12 +8,13 @@ namespace MyGame
 	public class Board
 	{
 		private ColorBlock[,] _blocks; 
-		private int _score;
-
+		private int _score, _scoreRed=4, _scoreBlue=3, _scoreGreen=2, _scoreYellow=1, _matchCount=1;
+		private bool _matchRed=false, _matchBlue=false, _matchGreen=false, _matchYellow=false;
 		public Board ()
 		{
 			_blocks = new ColorBlock[9, 9];
 			_score = 0;
+
 		}
 
 		public void GenerateBlock()
@@ -27,11 +28,9 @@ namespace MyGame
 				{
 					for (int y = 0; y < 9; y++)
 					{
-						if (_blocks[x, y] == null || _blocks [x, y].Color == Color.Black)
+						if (_blocks[x, y] == null || _blocks [x, y].Color == Color.Black || _blocks[x, y].Color == Color.Wheat || _blocks[x, y].Color == Color.Grey)
 						{
-							
-							AddBlock (x, y, myFactory.CreateRandBlock (a, b));
-								
+							AddBlock (x, y, myFactory.CreateRandBlock (a, b));		
 						}
 							
 						//increment x position
@@ -58,18 +57,20 @@ namespace MyGame
 				{
 					for (int y = 0; y < 9; y++)
 					{
-						if (_blocks[x, y] == null || _blocks [x, y].Color == Color.Black)
+						if (_blocks [x, y] == null || _blocks [x, y].Color == Color.Black)
 						{
-
-
-
-
-							AddBlock (x, y, myFactory.CreateRandBlock (a, b));
-
 							colorBlocks.Add (_blocks [x, y]);
-
-
-
+							AddBlock (x, y, myFactory.CreateRandBlock (a, b));
+						}
+						else if (_blocks [x, y].Color == Color.Wheat)
+						{
+							colorBlocks.Add (_blocks [x, y]);
+							AddBlock (x, y, myFactory.CreateTimerBlock (a, b));
+						}
+						else if (_blocks [x, y].Color == Color.Grey)
+						{
+							colorBlocks.Add (_blocks [x, y]);
+							AddBlock (x, y, myFactory.CreateRainbowBlock (a, b));
 						}
 
 						//increment x position
@@ -90,8 +91,6 @@ namespace MyGame
 				SwinGame.SpriteSetX (sprite, block.X-20);
 				SwinGame.SpriteSetY (sprite, block.Y-15);
 				_destroyedSprites.Add (sprite);
-
-
 			}
 
 			if (!sprite.AnimationHasEnded)
@@ -101,8 +100,11 @@ namespace MyGame
 
 			do
 			{
-				SwinGame.DrawAllSprites();
-
+				//SwinGame.DrawAllSprites();
+				foreach(Sprite _sprite in _destroyedSprites)
+				{
+					SwinGame.DrawSprite(_sprite);
+				}
 				SwinGame.RefreshScreen(60);
 				SwinGame.UpdateAllSprites();
 			} while(!sprite.AnimationHasEnded);
@@ -121,8 +123,9 @@ namespace MyGame
 			_blocks [x, y] = block;
 		}
 
-		public void RemoveBlock(List<ColorBlock> blocks)
+		public void RemoveBlock(List<ColorBlock> blocks, List<ColorBlock> timerBlocks, List<ColorBlock> rainbowBlocks)
 		{
+			//change the color of the blocks to be removed to black color 
 			for (int x = 0; x < 9; x++)
 			{
 				for (int y = 0; y < 9; y++)
@@ -131,7 +134,49 @@ namespace MyGame
 					{
 						if (_blocks [x, y] == block)
 						{
+							/* JOSEPH - different score for different colored diamonds */
+							if (_blocks [x, y].Color == Color.Red) {
+								_matchRed = true;
+							}
+							if (_blocks [x, y].Color == Color.Blue) {
+								_matchBlue = true;
+							}
+							if (_blocks [x, y].Color == Color.Green) {
+								_matchGreen = true;
+							}
+							if (_blocks [x, y].Color == Color.Yellow) {
+								_matchYellow = true;
+							}
 							_blocks [x, y].Color = Color.Black;
+						}
+					}
+				}
+			}
+
+			//change block color to wheat so that timer block will be generated for wheat color block
+			for (int x = 0; x < 9; x++)
+			{
+				for (int y = 0; y < 9; y++)
+				{
+					foreach (ColorBlock timerBlock in timerBlocks)
+					{
+						if (_blocks [x, y] == timerBlock)
+						{
+							_blocks [x, y].Color = Color.Wheat;
+						}
+					}
+				}
+			}
+
+			for (int x = 0; x < 9; x++)
+			{
+				for (int y = 0; y < 9; y++)
+				{
+					foreach (ColorBlock block in rainbowBlocks)
+					{
+						if (_blocks [x, y] == block)
+						{
+							_blocks [x, y].Color = Color.Grey;
 						}
 					}
 				}
@@ -147,14 +192,8 @@ namespace MyGame
 
 		public void DrawBoard()
 		{
-			/*for (int x = 0; x < 9; x++)
-			{
-				for (int y = 0; y < 9; y++)
-				{
-					_blocks [x, y].Draw ();
-				}
-			}*/
-			UIController.DrawGameBoard (_blocks);
+			
+			UIController.DrawGameBoard (this, _blocks);
 		}
 
 		public void Swap(ColorBlock firstSelected, ColorBlock secondSelected)
@@ -184,7 +223,11 @@ namespace MyGame
 		public bool CheckMatching()
 		{
 			List<ColorBlock> clusters = new List<ColorBlock> ();
+			List<ColorBlock> timerClusters = new List<ColorBlock> ();	//timer blocks that should be added into the board
+			List<ColorBlock> rainbowClusters = new List<ColorBlock>();	//rainbow blocks to be added in
 			int match = 0;
+			int hMatch = 0, vMatch = 0;
+			int timerMatch = 0;
 			bool startCheck = false;
 
 			//check horizontal match
@@ -201,11 +244,11 @@ namespace MyGame
 					}
 					else
 					{
-						if (_blocks [x, y].Color == _blocks [x, y + 1].Color)
+						
+						if (_blocks [x, y].Color == _blocks [x, y + 1].Color || (y < 7 && (_blocks[x, y].Color == Color.White || _blocks[x, y].Color == Color.MistyRose) && _blocks[x, y+1].Color == _blocks[x, y+2].Color) || (y > 0 && (_blocks[x, y +1].Color == Color.White || _blocks[x, y+1].Color == Color.MistyRose)&& _blocks[x, y -1].Color == _blocks[x, y].Color) || (y > 1 && (_blocks[x, y].Color == Color.White || _blocks[x, y].Color == Color.MistyRose) && _blocks[x, y-1].Color == _blocks[x, y-2].Color && _blocks[x, y-1].Color == _blocks[x, y+1].Color) )
 						{
 							match++;
-						}
-						else
+						} else
 						{
 							startCheck = true;
 						}
@@ -214,14 +257,30 @@ namespace MyGame
 					if (startCheck)
 					{
 						//if matching is greater than or equal to 3, add it into the clusters list 
+						if (match == 4)
+						{
+							if (!rainbowClusters.Contains (_blocks [x, y]))
+							{
+								rainbowClusters.Add (_blocks [x, y]);
+							}
+
+						} else if (match == 5)
+						{
+							if (!timerClusters.Contains (_blocks [x, y]))
+							{
+								timerClusters.Add (_blocks [x, y]);
+							}
+						}
+
 						if (match >= 3)
 						{
+							hMatch = match;
+							_matchCount = match + vMatch;
 							for (int i = 0; i < match; i++)
 							{
 								clusters.Add(_blocks[x, y-i]);
 
 							}
-
 						}
 						//reset the match for next checking
 						match = 1;
@@ -244,7 +303,7 @@ namespace MyGame
 					}
 					else
 					{
-						if (_blocks [y, x].Color == _blocks [y + 1, x].Color)
+						if (_blocks [y, x].Color == _blocks [y + 1, x].Color || (y < 7 && (_blocks[y, x].Color == Color.White || _blocks[y, x].Color == Color.MistyRose) && _blocks[y+1, x].Color == _blocks[y+2, x].Color) || (y > 0 && (_blocks[y+1, x ].Color == Color.White || _blocks[y+1, x].Color == Color.MistyRose) && _blocks[y-1, x].Color == _blocks[y, x].Color) || (y > 1 && (_blocks[y, x].Color == Color.White || _blocks[y, x].Color == Color.MistyRose) && _blocks[y-1, x].Color == _blocks[y-2, x].Color && _blocks[y-1, x].Color == _blocks[y+1, x].Color))
 						{
 							match++;
 						}
@@ -257,13 +316,29 @@ namespace MyGame
 
 					if (startCheck)
 					{
+						if (match == 4)
+						{
+							if (!rainbowClusters.Contains (_blocks [y, x]))
+							{
+								rainbowClusters.Add (_blocks [y, x]);
+							}
+
+						} else if (match == 5)
+						{
+							if (!timerClusters.Contains (_blocks [y, x]))
+							{
+								timerClusters.Add(_blocks[y, x]);
+							}
+						}
+
 						//if matching is greater than or equal to 3, add it into the clusters list
 						if (match >= 3)
 						{
+							vMatch = match;
+							_matchCount = match + hMatch;
 							for (int i = 0; i < match; i++)
 							{
 								clusters.Add (_blocks [y - i, x]);
-
 							}
 						}
 
@@ -280,10 +355,51 @@ namespace MyGame
 			}
 			else
 			{
-				RemoveBlock (clusters);
+				foreach (ColorBlock block in clusters)
+				{
+					if (block.Color == Color.White)
+					{
+						timerMatch++;
+					}
+				}
+				RemoveBlock (clusters, timerClusters, rainbowClusters);
+				IncreaseTime (timerMatch);
 				CalScore ();
 				return true;
 			}
+
+		}
+
+		public void IncreaseTime(int timerMatch)
+		{
+			UIController.endTime += timerMatch;
+			if (timerMatch > 0)
+			{
+				SwinGame.DrawTextLines ("Time Increase!", Color.White, SwinGame.RGBAColor (0, 0, 0, 200), "maven_pro_regular", 30, FontAlignment.AlignCenter, 125, 160, 300, 100);
+				SwinGame.Delay (200);
+			}
+
+			/*if (timerMatch > 0 && UIController.isTimerFreeze != true)
+			{
+				SwinGame.PauseTimer ("timer");
+				UIController.isTimerFreeze = true;
+
+				if (UIController.isCountStarted == false)
+				{
+					SwinGame.StartTimer ("countTimer");	//start timer to count
+					UIController.isCountStarted = true;
+				}
+
+			}
+
+			if (UIController.isTimerFreeze == true && (SwinGame.TimerTicks(UIController.countTimer)/1000) > 3)
+			{
+				SwinGame.ResumeTimer ("timer");
+				UIController.isTimerFreeze = false;
+
+				SwinGame.StopTimer ("countTimer");
+				UIController.isCountStarted = false;
+			}*/
 
 		}
 
@@ -296,7 +412,29 @@ namespace MyGame
 				{
 					if (_blocks [x, y].Color == Color.Black)
 					{
-						_score++;
+						//_score++;
+						/* JOSEPH - different score for different colored diamonds */
+						if (_matchRed == true) {
+							_score = _score + _scoreRed * _matchCount;
+							_matchRed = false;
+							_matchCount = 1;
+						}
+						if (_matchBlue == true) {
+							_score = _score + _scoreBlue * _matchCount;
+							_matchBlue = false;
+							_matchCount = 1;
+						}
+						if (_matchGreen == true) {
+							_score = _score + _scoreGreen * _matchCount;
+							_matchGreen = false;
+							_matchCount = 1;
+						}
+						if (_matchYellow == true)
+						{
+							_score = _score + _scoreYellow * _matchCount;
+							_matchYellow = false;
+							_matchCount = 1;
+						}
 					}
 				}
 			}

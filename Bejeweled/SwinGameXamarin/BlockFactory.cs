@@ -30,6 +30,16 @@ namespace MyGame
 				return new YellowBlock (x, y);
 			}
 		}
+
+		public ColorBlock CreateTimerBlock(float x, float y)
+		{
+			return new TimerBlock (x, y);
+		}
+
+		public ColorBlock CreateRainbowBlock(float x, float y)
+		{
+			return new RainbowBlock (x, y);
+		}
 			
 	}
 }

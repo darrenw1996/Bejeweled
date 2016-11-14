@@ -16,6 +16,7 @@ namespace MyGame
 				DrawOutline ();	
 			}
 
+			//SwinGame.FillRectangle (Color, X, Y, Width, Height);
 			string sprite = "";
 			if (Color == Color.Yellow)
 			{
@@ -30,7 +31,15 @@ namespace MyGame
 			} else if (Color == Color.Green)
 			{
 				sprite = "greenDiamond";
+			} else if (Color == Color.White)
+			{
+				sprite = "timerBlock";
 			}
+			else if (Color == Color.MistyRose)
+			{
+				sprite = "rainbowDiamond";
+			}
+			//sprite = "rainbowDiamond";
 			//SwinGame.FillRectangle (Color.Maroon, X, Y, Width, Height);
 			//SwinGame.FillRectangle (Color.SaddleBrown, X+5, Y+5, Width-10, Height-10);
 

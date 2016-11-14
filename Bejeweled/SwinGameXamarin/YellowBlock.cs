@@ -35,6 +35,12 @@ namespace MyGame
 			{
 				sprite = "greenDiamond";
 				//myColor = Color.Azure;
+			} else if (Color == Color.White)
+			{
+				sprite = "timerBlock";
+			} else if (Color == Color.MistyRose)
+			{
+				sprite = "rainbowDiamond";
 			}
 			//SwinGame.FillRectangle (Color.Maroon, X, Y, Width, Height);
 			//SwinGame.FillRectangle (Color.SaddleBrown, X+5, Y+5, Width-10, Height-10);

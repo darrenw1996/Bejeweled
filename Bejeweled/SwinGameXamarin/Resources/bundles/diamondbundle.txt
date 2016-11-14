@@ -2,4 +2,5 @@ BITMAP,diamondblue,bluediamond.png, 32, 32, 8, 1, 8
 BITMAP,diamondred,reddiamond.png, 32, 32, 8, 1, 8
 BITMAP,diamondgreen,greendiamond.png, 32, 32, 8, 1, 8
 BITMAP,diamondyellow,yellowdiamond.png, 32, 32, 8, 1, 8
+BITMAP,diamondtimer,clock.png, 40, 39, 3, 3, 9
 ANIM,diamondanimation,diamondanimation.txt

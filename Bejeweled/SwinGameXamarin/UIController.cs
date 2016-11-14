@@ -8,6 +8,21 @@ namespace MyGame
 	{
 		private	static Dictionary<string, Sprite> _Sprites = new Dictionary<string, Sprite> ();
 		private static Bitmap _Background;
+		private static uint timeTicks;
+		private static Timer gameTime = SwinGame.CreateTimer("timer");
+		public static int endTime = 60;
+
+		public static uint TimeTicks
+		{
+			get{ return timeTicks; }
+			set { timeTicks = value; }
+		}
+
+		public static Timer gameTimer
+		{
+			get{ return gameTime; }
+			set { gameTime = value; }
+		}
 
 		public static Sprite getSprite(string sprite)
 		{
@@ -40,10 +55,19 @@ namespace MyGame
 			Sprite greenDiamond = SwinGame.CreateSprite(SwinGame.BitmapNamed("diamondgreen"), SwinGame.AnimationScriptNamed("diamondanimation"));
 			_Sprites.Add ("greenDiamond", greenDiamond);
 
-			SwinGame.SpriteStartAnimation (_Sprites["blueDiamond"], "spinningdiamond");
-			SwinGame.SpriteStartAnimation (_Sprites["redDiamond"], "spinningdiamond");
-			SwinGame.SpriteStartAnimation (_Sprites["yellowDiamond"], "spinningdiamond");
-			SwinGame.SpriteStartAnimation (_Sprites["greenDiamond"], "spinningdiamond");
+			Sprite timerBlock = SwinGame.CreateSprite(SwinGame.BitmapNamed("diamondtimer"), SwinGame.AnimationScriptNamed("diamondanimation"));
+			_Sprites.Add ("timerBlock", timerBlock);
+
+			Sprite rainbowDiamond = SwinGame.CreateSprite (SwinGame.BitmapNamed ("diamondrainbow"), SwinGame.AnimationScriptNamed ("diamondanimation"));
+			_Sprites.Add ("rainbowDiamond", rainbowDiamond);
+
+			//SwinGame.SpriteStartAnimation (_Sprites["blueDiamond"], "spinningdiamond");
+			//SwinGame.SpriteStartAnimation (_Sprites["redDiamond"], "spinningdiamond");
+			//SwinGame.SpriteStartAnimation (_Sprites["yellowDiamond"], "spinningdiamond");
+			//SwinGame.SpriteStartAnimation (_Sprites["greenDiamond"], "spinningdiamond");
+			SwinGame.SpriteStartAnimation (_Sprites["timerBlock"], "spinningdiamond");
+			SwinGame.SpriteStartAnimation (_Sprites ["rainbowDiamond"], "spinningdiamond");
+
 		}
 
 		public static void LoadResources()
@@ -53,8 +77,9 @@ namespace MyGame
 			LoadImages ();
 		}
 
-		public static void DrawGameBoard(ColorBlock[,] _blocks)
+		public static void DrawGameBoard(Board myBoard,ColorBlock[,] _blocks)
 		{
+			timeTicks = SwinGame.TimerTicks (gameTime);
 			SwinGame.DrawBitmapOnScreen (_Background, 0 ,0);
 			SwinGame.FillRectangle(SwinGame.RGBAColor (0, 0, 0, 100), 12, 12, 525, 615);
 			for (int x = 0; x < 9; x++)
@@ -67,6 +92,10 @@ namespace MyGame
 				
 			SwinGame.FillRectangle(SwinGame.RGBAColor (0, 0, 0, 200), 12, 639, 524, 50);
 
+			SwinGame.DrawRectangle (Color.White, 12, 639, 524, 50);
+			SwinGame.DrawText ("EndTime: " + endTime, Color.White, 350, 645);
+			SwinGame.DrawText ("Score: " + myBoard.Score, Color.White, 100, 660); 
+			SwinGame.DrawText ("Time: " + (timeTicks/=1000).ToString() + " seconds", Color.White, 350, 660);
 		}
 
 		public static void DrawMenuPage()

@@ -1,21 +1,19 @@
 ﻿using System;
 using SwinGameSDK;
-
 namespace MyGame
 {
-	public class BlueBlock:ColorBlock
+	public class TimerBlock:ColorBlock
 	{
-		public BlueBlock (float x, float y):base (x, y, Color.Blue)
+		public TimerBlock (float x, float y):base (x, y, Color.White)
 		{
 		}
-
+			
 		public override void Draw ()
 		{
 			if (Selected)
 			{
 				DrawOutline ();	
 			}
-
 			//SwinGame.FillRectangle (Color, X, Y, Width, Height);
 			string sprite = "";
 			if (Color == Color.Yellow)
@@ -25,13 +23,16 @@ namespace MyGame
 			else if (Color == Color.Red)
 			{
 				sprite = "redDiamond";
-			} else if (Color == Color.Blue)
+			}
+			else if (Color == Color.Blue)
 			{
 				sprite = "blueDiamond";
-			} else if (Color == Color.Green)
+			}
+			else if (Color == Color.Green)
 			{
 				sprite = "greenDiamond";
-			} else if (Color == Color.White)
+			}
+			else if (Color == Color.White)
 			{
 				sprite = "timerBlock";
 			} else if (Color == Color.MistyRose)

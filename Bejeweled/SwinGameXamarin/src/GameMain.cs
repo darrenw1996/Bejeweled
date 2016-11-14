@@ -15,8 +15,9 @@ namespace MyGame
 			bool startGame = false;   
 			bool endGame = false;    //display final score page
 			bool instruction = false;  //instruction page
-			Timer gameTime = SwinGame.CreateTimer("timer");	//game time
-			uint ticks;   //timer ticks
+			//Timer gameTime = SwinGame.CreateTimer("timer");	//game time
+			//uint ticks = 0;   //timer ticks
+			//uint timeDiff = 0;
 
 
 			Board myBoard = new Board ();
@@ -59,7 +60,7 @@ namespace MyGame
 						{
 							//start the game and timer
 							startGame = true;
-							SwinGame.StartTimer (gameTime);
+							SwinGame.StartTimer (UIController.gameTimer);
 
 						}
 						else if (SwinGame.PointInRect (SwinGame.MousePosition (), 220, 356, 108, 48))
@@ -94,25 +95,25 @@ namespace MyGame
 				//if player chose to start the game, display the board and start the game
 				if (startGame)
 				{
-					
-					ticks = SwinGame.TimerTicks (gameTime);
+					//ticks = ticks + (SwinGame.TimerTicks (gameTime) - (ticks + timeDiff));
+					//ticks = SwinGame.TimerTicks(UIController.gameTimer) / 1000;
 
+					//ticks = UIController.TimeTicks;
 					//Draw game board
 					myBoard.DrawBoard ();
 
-					SwinGame.DrawRectangle (Color.White, 12, 639, 524, 50);
+					/*SwinGame.DrawRectangle (Color.White, 12, 639, 524, 50);
 					SwinGame.DrawText ("Score: " + myBoard.Score, Color.White, 100, 660); 
-					SwinGame.DrawText ("Time: " + (ticks/=1000).ToString() + " seconds", Color.White, 350, 660); 
+					SwinGame.DrawText ("Time: " + (ticks/=1000).ToString() + " seconds", Color.White, 350, 660); */
 
 					//when time reaches 1 minute, show the final score page
-					if (ticks >= 60)
+					if (UIController.TimeTicks >= UIController.endTime)
 					{
 						startGame = false;
 						instruction = false;
 						endGame = true;
 					}
-
-
+						
 					//Check for user's action
 					if (SwinGame.MouseClicked (MouseButton.LeftButton))
 					{
@@ -160,9 +161,19 @@ namespace MyGame
 						{
 							endGame = false;
 							startGame = true;
-							SwinGame.ResetTimer (gameTime);
-							myBoard.Score = 0;
 
+							myBoard = new Board ();
+							myBoard.GenerateBlock ();
+
+							//check for matching, delete matching blocks and generate new blocks until there is no matching blocks in it
+							while (myBoard.CheckMatching ())
+							{
+								myBoard.CheckMatching ();
+								myBoard.GenerateBlock ();
+							}
+							SwinGame.ResetTimer (UIController.gameTimer);
+							myBoard.Score = 0;
+							UIController.endTime = 60;
 						}
 						else if (SwinGame.PointInRect (SwinGame.MousePosition (), 220, 416, 108, 48))
 						{

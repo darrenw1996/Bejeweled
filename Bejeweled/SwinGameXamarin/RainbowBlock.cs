@@ -1,12 +1,12 @@
 ﻿using System;
 using SwinGameSDK;
-
 namespace MyGame
 {
-	public class BlueBlock:ColorBlock
+	public class RainbowBlock:ColorBlock
 	{
-		public BlueBlock (float x, float y):base (x, y, Color.Blue)
+		public RainbowBlock (float x, float y):base (x, y, Color.MistyRose)
 		{
+			
 		}
 
 		public override void Draw ()
@@ -25,16 +25,20 @@ namespace MyGame
 			else if (Color == Color.Red)
 			{
 				sprite = "redDiamond";
-			} else if (Color == Color.Blue)
+			}
+			else if (Color == Color.Blue)
 			{
 				sprite = "blueDiamond";
-			} else if (Color == Color.Green)
+			}
+			else if (Color == Color.Green)
 			{
 				sprite = "greenDiamond";
-			} else if (Color == Color.White)
+			}
+			else if (Color == Color.White)
 			{
 				sprite = "timerBlock";
-			} else if (Color == Color.MistyRose)
+			} 
+			else if (Color == Color.MistyRose)
 			{
 				sprite = "rainbowDiamond";
 			}

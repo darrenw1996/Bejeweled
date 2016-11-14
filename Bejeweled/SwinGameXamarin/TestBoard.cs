@@ -25,6 +25,8 @@ namespace MyGame
 		{
 			Board board = new Board ();
 			List<ColorBlock> clusters = new List<ColorBlock> ();
+			List<ColorBlock> timerClusters = new List<ColorBlock> ();
+			List<ColorBlock> rainbowClusters = new List<ColorBlock> ();
 			board.GenerateBlock ();
 
 			for (int x = 0; x < 1; x++)
@@ -35,7 +37,7 @@ namespace MyGame
 				}
 			}
 			//remove 4 blocks 
-			board.RemoveBlock (clusters);
+			board.RemoveBlock (clusters, timerClusters, rainbowClusters);
 			board.CalScore ();
 			//check that there are 4 blocks in black color
 			Assert.AreEqual (4, board.Score);

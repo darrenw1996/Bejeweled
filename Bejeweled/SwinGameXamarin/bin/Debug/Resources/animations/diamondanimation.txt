@@ -5,6 +5,8 @@ SwinGame Animation #v1
 //[a,b,c] = explicit values
 //[a-b,c] = combination
 f:[0-7],[0-7],7,0
+f:[8-12],[0-4],7,0
 
 //identifiers
 i:spinningdiamond,0
+i:spinningrainbow,8
