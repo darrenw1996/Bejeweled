@@ -1,3 +1,9 @@
 language: csharp
 solution: Bejeweled/SwinGameXamarin/MyGame.sln
 script: xbuild /p:Configuration=Debug-Windows Bejeweled/SwinGameXamarin/MyGame.sln
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore Bejeweled/SwinGameXamarin/MyGame.sln
+after_script:
+  - nunit-console Tests/bin/Debug/Tests.dll
