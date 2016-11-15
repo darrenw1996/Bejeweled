@@ -27,21 +27,56 @@ namespace MyGame
 			List<ColorBlock> clusters = new List<ColorBlock> ();
 			List<ColorBlock> timerClusters = new List<ColorBlock> ();
 			List<ColorBlock> rainbowClusters = new List<ColorBlock> ();
+			int count = 0;
 			board.GenerateBlock ();
 
 			for (int x = 0; x < 1; x++)
 			{
-				for (int y = 0; y < 4; y++)
+				for (int y = 0; y < 3; y++)
 				{
 					clusters.Add (board.Block [x, y]);
 				}
 			}
 			//remove 4 blocks 
 			board.RemoveBlock (clusters, timerClusters, rainbowClusters);
-			board.CalScore ();
-			//check that there are 4 blocks in black color
-			Assert.AreEqual (4, board.Score);
 
+			for (int x = 0; x < 9; x++)
+			{
+				for (int y = 0; y < 9; y++)
+				{
+					if (board.Block [x, y].Color == Color.Black)
+					{
+						count++;
+					}
+				}
+			}
+
+			//check that there are 4 blocks in black color
+			Assert.AreEqual (3, count);
+
+		}
+
+		[Test()]
+		public void TestRemoveTimerBlock()
+		{
+			Board board = new Board ();
+			List<ColorBlock> clusters = new List<ColorBlock> ();
+			List<ColorBlock> timerClusters = new List<ColorBlock> ();
+			List<ColorBlock> rainbowClusters = new List<ColorBlock> ();
+			board.GenerateBlock ();
+
+			for (int x = 0; x < 1; x++)
+			{
+				for (int y = 0; y < 2; y++)
+				{
+					timerClusters.Add (board.Block [x, y]);
+				}
+			}
+
+			board.RemoveBlock (clusters, timerClusters, rainbowClusters);
+
+			Assert.AreEqual(Color.Wheat, timerClusters[0].Color);
+			Assert.AreEqual (Color.White, timerClusters[1].Color);
 		}
 
 		[Test()]
@@ -100,7 +135,7 @@ namespace MyGame
 			Assert.AreEqual (Color.Blue, blue.Color);
 		}
 
-		[Test()]
+		/*[Test()]
 		public void TestCalScore()
 		{
 			Board board = new Board ();
@@ -112,7 +147,7 @@ namespace MyGame
 			//check that the score is 2 as there are 2 blocks in black
 			board.CalScore ();
 			Assert.AreEqual (2, board.Score);
-		}
+		}*/
 	}
 }
 
