@@ -6,6 +6,7 @@ namespace MyGame
 	public abstract class ColorBlock
 	{
 		private Color _color;
+		private Sprite _sprite;
 		private float _x, _y;
 		private int _width, _height;
 		private bool _selected;
@@ -74,6 +75,10 @@ namespace MyGame
 
 		public abstract void Draw();
 
+		public Sprite Sprite {
+			get { return _sprite; }
+			set { _sprite = value; }
+		}
 	}
 }
 

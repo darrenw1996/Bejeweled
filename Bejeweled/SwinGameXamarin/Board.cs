@@ -213,11 +213,157 @@ namespace MyGame
 							firstSelected.Color = secondSelected.Color;
 							secondSelected.Color = temp.Color;
 
+							if (((y >= 1 && _blocks [x, y - 1] == secondSelected) || (y <= 7 && _blocks [x, y + 1] == secondSelected)) && secondSelected.Selected) {
+
+								string sprt1 = "", sprite_first = "";
+								string sprt2 = "", sprite_second = "";
+
+								if (firstSelected.Color == Color.Red) {
+									sprt1 = "redDiamond";
+									sprite_first = "diamondred";
+								} else if (firstSelected.Color == Color.Blue) {
+									sprt1 = "blueDiamond";
+									sprite_first = "diamondblue";
+								} else if (firstSelected.Color == Color.Green) {
+									sprt1 = "greenDiamond";
+									sprite_first = "diamondgreen";
+								} else if (firstSelected.Color == Color.Yellow) {
+									sprt1 = "yellowDiamond";
+									sprite_first = "diamondyellow";
+								}
+
+								if (secondSelected.Color == Color.Red) {
+									sprt2 = "redDiamond";
+									sprite_second = "diamondred";
+								} else if (secondSelected.Color == Color.Blue) {
+									sprt2 = "blueDiamond";
+									sprite_second = "diamondblue";
+								} else if (secondSelected.Color == Color.Green) {
+									sprt2 = "greenDiamond";
+									sprite_second = "diamondgreen";
+								} else if (secondSelected.Color == Color.Yellow) {
+									sprt2 = "yellowDiamond";
+									sprite_second = "diamondyellow";
+								}
+
+								/*
+								SwinGame.SpriteSetX (UIController.getSprite (sprt1), secondSelected.X + 10);
+								SwinGame.SpriteSetY (UIController.getSprite (sprt1), secondSelected.Y + 15);
+								SwinGame.SpriteSetX (UIController.getSprite (sprt2), firstSelected.X + 10);
+								SwinGame.SpriteSetY (UIController.getSprite (sprt2), firstSelected.Y + 15);
+
+								SwinGame.DrawSprite (UIController.getSprite (sprt1));
+								SwinGame.DrawSprite (UIController.getSprite (sprt2));
+*/
+								Sprite sprite1 = SwinGame.CreateSprite (SwinGame.BitmapNamed (sprite_first), SwinGame.AnimationScriptNamed ("diamondanimation"));
+								Sprite sprite2 = SwinGame.CreateSprite (SwinGame.BitmapNamed (sprite_second), SwinGame.AnimationScriptNamed ("diamondanimation"));
+
+								SwinGame.SpriteSetX (sprite1, firstSelected.X + 10);
+								SwinGame.SpriteSetY (sprite1, firstSelected.Y + 15);
+								SwinGame.SpriteSetX (sprite2, secondSelected.X + 10);
+								SwinGame.SpriteSetY (sprite2, secondSelected.Y + 15);
+
+								SwinGame.DrawSprite (sprite1);
+								SwinGame.DrawSprite (sprite2);
+
+								SwinGame.UpdateSprite (sprite1);
+								SwinGame.UpdateSprite (sprite2);
+								SwinGame.RefreshScreen (30);
+
+								SwinGame.SpriteSetDX (secondSelected.Sprite, 10);
+								SwinGame.SpriteSetDY (secondSelected.Sprite, 10);
+								SwinGame.SpriteSetDX (secondSelected.Sprite, 10);
+								SwinGame.SpriteSetDY (secondSelected.Sprite, 10);
+
+								SwapAnimation (sprite1, -10, 0);
+								SwapAnimation (sprite2, +10, 0);
+
+								SwinGame.SpriteSetDX (sprite1, -10);
+								SwinGame.SpriteSetDY (sprite1, +10);
+
+
+								//SwinGame.UpdateSprite (firstSelected.Sprite);
+								//SwinGame.UpdateSprite (secondSelected.Sprite);
+							}
+							if (((x >= 1 && _blocks [x - 1, y] == secondSelected) || (x <= 7 && _blocks [x + 1, y] == secondSelected)) && secondSelected.Selected) {
+								
+								string sprt1 = "", sprite_first = "";
+								string sprt2 = "", sprite_second = "";
+
+								if (firstSelected.Color == Color.Red) {
+									sprt1 = "redDiamond";
+									sprite_first = "diamondred";
+								} else if (firstSelected.Color == Color.Blue) {
+									sprt1 = "blueDiamond";
+									sprite_first = "diamondblue";
+								} else if (firstSelected.Color == Color.Green) {
+									sprt1 = "greenDiamond";
+									sprite_first = "diamondgreen";
+								} else if (firstSelected.Color == Color.Yellow) {
+									sprt1 = "yellowDiamond";
+									sprite_first = "diamondyellow";
+								}
+
+								if (secondSelected.Color == Color.Red) {
+									sprt2 = "redDiamond";
+									sprite_second = "diamondred";
+								} else if (secondSelected.Color == Color.Blue) {
+									sprt2 = "blueDiamond";
+									sprite_second = "diamondblue";
+								} else if (secondSelected.Color == Color.Green) {
+									sprt2 = "greenDiamond";
+									sprite_second = "diamondgreen";
+								} else if (secondSelected.Color == Color.Yellow) {
+									sprt2 = "yellowDiamond";
+									sprite_second = "diamondyellow";
+								}
+
+								/*
+								SwinGame.SpriteSetX (UIController.getSprite (sprt1), secondSelected.X + 10);
+								SwinGame.SpriteSetY (UIController.getSprite (sprt1), secondSelected.Y + 15);
+								SwinGame.SpriteSetX (UIController.getSprite (sprt2), firstSelected.X + 10);
+								SwinGame.SpriteSetY (UIController.getSprite (sprt2), firstSelected.Y + 15);
+
+								SwinGame.DrawSprite (UIController.getSprite (sprt1));
+								SwinGame.DrawSprite (UIController.getSprite (sprt2));
+*/
+								Sprite sprite1 = SwinGame.CreateSprite (SwinGame.BitmapNamed (sprite_first), SwinGame.AnimationScriptNamed ("diamondanimation"));
+								Sprite sprite2 = SwinGame.CreateSprite (SwinGame.BitmapNamed (sprite_second), SwinGame.AnimationScriptNamed ("diamondanimation"));
+
+								SwinGame.SpriteSetX (sprite1, firstSelected.X + 10);
+								SwinGame.SpriteSetY (sprite1, firstSelected.Y + 15);
+								SwinGame.SpriteSetX (sprite2, secondSelected.X + 10);
+								SwinGame.SpriteSetY (sprite2, secondSelected.Y + 15);
+
+								SwinGame.DrawSprite (sprite1);
+								SwinGame.DrawSprite (sprite2);
+
+								SwinGame.UpdateSprite (sprite1);
+								SwinGame.UpdateSprite (sprite2);
+								SwinGame.RefreshScreen (30);
+
+								SwinGame.SpriteSetDX (sprite1, 10);
+								SwinGame.SpriteSetDY (sprite1, 10);
+								SwinGame.SpriteSetDX (sprite2, 10);
+								SwinGame.SpriteSetDY (sprite2, 10);
+
+								SwapAnimation (sprite1, 0, -10);
+								SwapAnimation (sprite2, 0, +10);
+
+								//SwinGame.UpdateSprite (firstSelected.Sprite);
+								//SwinGame.UpdateSprite (secondSelected.Sprite);
+							}
 						}
 					}
 				}
 			}
 
+		}
+
+		public void SwapAnimation (Sprite sprt, float dx, float dy)
+		{
+			SwinGame.SpriteSetDX (sprt, dx);
+			SwinGame.SpriteSetDY (sprt, dy);
 		}
 
 		public bool CheckMatching()
