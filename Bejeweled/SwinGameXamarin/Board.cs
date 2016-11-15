@@ -213,6 +213,41 @@ namespace MyGame
 							firstSelected.Color = secondSelected.Color;
 							secondSelected.Color = temp.Color;
 
+							/* JOSEPH - swap the diamond blocks animation*/
+							string sprt1 = "";
+							string sprt2 = "";
+
+							if (firstSelected.Color == Color.Red) {
+								sprt1 = "redDiamond";
+							} else if (firstSelected.Color == Color.Blue) { 
+								sprt1 = "blueDiamond";
+							} else if (firstSelected.Color == Color.Green) {
+								sprt1 = "greenDiamond";
+							} else if (firstSelected.Color == Color.Yellow) {
+								sprt1 = "yellowDiamond";
+							} else if (firstSelected.Color == Color.MistyRose) {
+								sprt1 = "rainbowDiamond";
+							}
+
+							SwinGame.SpriteSetX (UIController.getSprite (sprt1), firstSelected.X + 10);
+							SwinGame.SpriteSetY (UIController.getSprite (sprt1), firstSelected.Y + 15);
+							SwinGame.DrawSprite (UIController.getSprite (sprt1));
+
+							if (secondSelected.Color == Color.Red) {
+								sprt2 = "redDiamond";
+							} else if (secondSelected.Color == Color.Blue) {
+								sprt2 = "blueDiamond";
+							} else if (secondSelected.Color == Color.Green) {
+								sprt2 = "greenDiamond";
+							} else if (secondSelected.Color == Color.Yellow) {
+								sprt2 = "yellowDiamond";
+							} else if (secondSelected.Color == Color.MistyRose) {
+								sprt2 = "rainbowDiamond";
+							}
+
+							SwinGame.SpriteSetX (UIController.getSprite (sprt2), secondSelected.X + 10);
+							SwinGame.SpriteSetY (UIController.getSprite (sprt2), secondSelected.Y + 15);
+							SwinGame.DrawSprite (UIController.getSprite (sprt2));
 						}
 					}
 				}

@@ -7,13 +7,14 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="Board.cs">
     <Files>
-      <File FileName="UIController.cs" Line="1" Column="1" />
+      <File FileName="UIController.cs" Line="21" Column="32" />
       <File FileName="src\GameMain.cs" Line="1" Column="1" />
-      <File FileName="GreenBlock.cs" Line="1" Column="1" />
+      <File FileName="Board.cs" Line="240" Column="52" />
+      <File FileName="GreenBlock.cs" Line="43" Column="4" />
       <File FileName="BlueBlock.cs" Line="1" Column="1" />
-      <File FileName="RainbowBlock.cs" Line="1" Column="1" />
-      <File FileName="Board.cs" Line="192" Column="3" />
+      <File FileName="RainbowBlock.cs" Line="43" Column="29" />
       <File FileName="BlockFactory.cs" Line="1" Column="1" />
+      <File FileName="ColorBlock.cs" Line="13" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>
