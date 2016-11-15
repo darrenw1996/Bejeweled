@@ -8,4 +8,4 @@ before_install:
 before_script:
   - nuget restore Bejeweled/SwinGameXamarin/MyGame.sln
 after_script:
-  - nunit-console Bejeweled/SwinGameXamarin/TestBoard.cs
+  - nunit-console Bejeweled/SwinGameXamarin/packages/NUnit.2.6.4/lib/nunit.framework.dll
