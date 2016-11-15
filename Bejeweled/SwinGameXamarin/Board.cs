@@ -231,10 +231,6 @@ namespace MyGame
 								sprt1 = "rainbowDiamond";
 							}
 
-							SwinGame.SpriteSetX (UIController.getSprite (sprt1), firstSelected.X + 10);
-							SwinGame.SpriteSetY (UIController.getSprite (sprt1), firstSelected.Y + 15);
-							SwinGame.DrawSprite (UIController.getSprite (sprt1));
-
 							if (secondSelected.Color == Color.Red) {
 								sprt2 = "redDiamond";
 							} else if (secondSelected.Color == Color.Blue) {
@@ -249,9 +245,17 @@ namespace MyGame
 								sprt2 = "rainbowDiamond";
 							}
 
-							SwinGame.SpriteSetX (UIController.getSprite (sprt2), secondSelected.X + 10);
-							SwinGame.SpriteSetY (UIController.getSprite (sprt2), secondSelected.Y + 15);
-							SwinGame.DrawSprite (UIController.getSprite (sprt2));
+							if (sprt1 != "timerBlock" && sprt2 != "timerBlock") {
+								SwinGame.SpriteSetX (UIController.getSprite (sprt1), firstSelected.X + 10);
+								SwinGame.SpriteSetY (UIController.getSprite (sprt1), firstSelected.Y + 15);
+								SwinGame.DrawSprite (UIController.getSprite (sprt1));
+							}
+
+							if (sprt1 != "timerBlock" && sprt2 != "timerBlock") {
+								SwinGame.SpriteSetX (UIController.getSprite (sprt2), secondSelected.X + 10);
+								SwinGame.SpriteSetY (UIController.getSprite (sprt2), secondSelected.Y + 15);
+								SwinGame.DrawSprite (UIController.getSprite (sprt2));
+							}
 						}
 					}
 				}
