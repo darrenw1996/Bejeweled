@@ -225,6 +225,8 @@ namespace MyGame
 								sprt1 = "greenDiamond";
 							} else if (firstSelected.Color == Color.Yellow) {
 								sprt1 = "yellowDiamond";
+							} else if (firstSelected.Color == Color.White ) {
+								sprt1 = "timerBlock";
 							} else if (firstSelected.Color == Color.MistyRose) {
 								sprt1 = "rainbowDiamond";
 							}
@@ -241,6 +243,8 @@ namespace MyGame
 								sprt2 = "greenDiamond";
 							} else if (secondSelected.Color == Color.Yellow) {
 								sprt2 = "yellowDiamond";
+							} else if (secondSelected.Color == Color.White ) {
+								sprt2 = "timerBlock";
 							} else if (secondSelected.Color == Color.MistyRose) {
 								sprt2 = "rainbowDiamond";
 							}
