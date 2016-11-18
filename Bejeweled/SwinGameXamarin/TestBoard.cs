@@ -76,8 +76,17 @@ namespace MyGame
 			board.RemoveBlock (clusters, timerClusters, rainbowClusters);
 
 			Assert.AreEqual(Color.Wheat, timerClusters[0].Color);
-			Assert.AreEqual (Color.White, timerClusters[1].Color);
+			Assert.AreEqual (Color.Wheat, timerClusters[1].Color);
 		}
+
+		/*[Test()]
+		public void TestGenerateTimerBlock()
+		{
+			Board board = new Board ();
+			board.GenerateBlock ();
+			board.Block [0, 0].Color = Color.Wheat;
+			board.GenerateBlock2 ();
+		}*/
 
 		[Test()]
 		public void TestSwapLeftRight()

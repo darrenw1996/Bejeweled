@@ -109,7 +109,7 @@ namespace MyGame
 				SwinGame.UpdateAllSprites();
 			} while(!sprite.AnimationHasEnded);
 
-			if (sprite.AnimationHasEnded)
+			if (sprite.AnimationHasEnded && UIController.TimerPaused == false)
 			{
 				SwinGame.ResumeTimer("timer");
 			}
@@ -181,7 +181,6 @@ namespace MyGame
 					}
 				}
 			}
-
 		}
 
 		public ColorBlock[,] Block
@@ -313,17 +312,16 @@ namespace MyGame
 						}
 					}
 
-
 					if (startCheck)
 					{
-						if (match == 4)
+						if (match == 5)
 						{
 							if (!rainbowClusters.Contains (_blocks [y, x]))
 							{
 								rainbowClusters.Add (_blocks [y, x]);
 							}
 
-						} else if (match == 5)
+						} else if (match == 4)
 						{
 							if (!timerClusters.Contains (_blocks [y, x]))
 							{
@@ -372,10 +370,10 @@ namespace MyGame
 
 		public void IncreaseTime(int timerMatch)
 		{
-			UIController.endTime += timerMatch;
+			UIController.EndTime += timerMatch;
 			if (timerMatch > 0)
 			{
-				SwinGame.DrawTextLines ("Time Increase!", Color.White, SwinGame.RGBAColor (0, 0, 0, 200), "maven_pro_regular", 30, FontAlignment.AlignCenter, 125, 160, 300, 100);
+				SwinGame.DrawTextLines ("Time Increase!", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 20, FontAlignment.AlignCenter, 492, 300, 300, 100);
 				SwinGame.Delay (200);
 			}
 

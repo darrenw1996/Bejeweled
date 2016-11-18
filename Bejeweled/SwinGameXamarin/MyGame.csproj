@@ -86,6 +86,8 @@
     <Compile Include="UIController.cs" />
     <Compile Include="TimerBlock.cs" />
     <Compile Include="RainbowBlock.cs" />
+    <Compile Include="GameController.cs" />
+    <Compile Include="GameState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
