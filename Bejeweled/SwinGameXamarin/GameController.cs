@@ -195,30 +195,43 @@ namespace MyGame
 			}
 		}
 
+		public static void HandleRankinginput(){
+			if (SwinGame.MouseClicked (MouseButton.LeftButton))
+			{
+				if (SwinGame.PointInRect (SwinGame.MousePosition (), 280, 500, 200, 99))
+				{
+					//Go back to the game menu page
+					gameState = GameState.ViewingGameMenu;
+				}
+			}
+
+		}
+
 		public static void HandleEndOfGameInput()
 		{
 			if (SwinGame.MouseClicked (MouseButton.LeftButton))
 			{
-				if (SwinGame.PointInRect (SwinGame.MousePosition (), 220, 295, 108, 48))
+				if (SwinGame.PointInRect (SwinGame.MousePosition (), 500, 500, 200, 99))
 				{
-					gameState = GameState.PlayingGame;
+					//gameState = GameState.PlayingGame;
 
-					myBoard = new Board ();
-					myBoard.GenerateBlock ();
+					//myBoard = new Board ();
+					//myBoard.GenerateBlock ();
 
 					//check for matching, delete matching blocks and generate new blocks until there is no matching blocks in it
-					while (myBoard.CheckMatching ())
-					{
-						myBoard.CheckMatching ();
-						myBoard.GenerateBlock ();
-					}
+					//while (myBoard.CheckMatching ())
+					//{
+					//	myBoard.CheckMatching ();
+					//	myBoard.GenerateBlock ();
+					//}
 					SwinGame.ResetTimer (UIController.gameTimer);
 					myBoard.Score = 0;
 					UIController.EndTime = 60;
+					GameState = GameState.PlayingGame;
 				}
-				else if (SwinGame.PointInRect (SwinGame.MousePosition (), 220, 416, 108, 48))
+				else if (SwinGame.PointInRect (SwinGame.MousePosition (), 60, 500, 200, 99))
 				{
-					gameState = GameState.Quitting;
+					gameState = GameState.ViewingGameMenu;
 				}
 			}
 		}

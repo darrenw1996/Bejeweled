@@ -23,7 +23,7 @@ namespace MyGame
 		private static Dictionary<string, Music> _Music = new Dictionary<string, Music> ();
 		private static uint timeTicks;
 		private static Timer gameTime = SwinGame.CreateTimer("timer");
-		private static int endTime = 60;
+		private static int endTime = 5;
 		private static bool isTimerPaused = false;
 
 		public static bool TimerPaused
@@ -68,6 +68,7 @@ namespace MyGame
 			_Images.Add ("exit", SwinGame.LoadBitmap ("exitbtn.png"));
 			_Images.Add ("button", SwinGame.LoadBitmap ("button.png"));
 			_Images.Add ("instruction", SwinGame.LoadBitmap ("instruction.png"));
+			_Images.Add ("ranking", SwinGame.LoadBitmap ("ranking.png"));
 		}
 
 		private static void LoadBundles()
@@ -96,10 +97,10 @@ namespace MyGame
 			Sprite rainbowDiamond = SwinGame.CreateSprite (SwinGame.BitmapNamed ("diamondrainbow"), SwinGame.AnimationScriptNamed ("diamondanimation"));
 			_Sprites.Add ("rainbowDiamond", rainbowDiamond);
 
-			//SwinGame.SpriteStartAnimation (_Sprites["blueDiamond"], "spinningdiamond");
-			//SwinGame.SpriteStartAnimation (_Sprites["redDiamond"], "spinningdiamond");
-			//SwinGame.SpriteStartAnimation (_Sprites["yellowDiamond"], "spinningdiamond");
-			//SwinGame.SpriteStartAnimation (_Sprites["greenDiamond"], "spinningdiamond");
+			SwinGame.SpriteStartAnimation (_Sprites["blueDiamond"], "spinningdiamond");
+			SwinGame.SpriteStartAnimation (_Sprites["redDiamond"], "spinningdiamond");
+			SwinGame.SpriteStartAnimation (_Sprites["yellowDiamond"], "spinningdiamond");
+			SwinGame.SpriteStartAnimation (_Sprites["greenDiamond"], "spinningdiamond");
 			SwinGame.SpriteStartAnimation (_Sprites["timerBlock"], "spinningdiamond");
 			SwinGame.SpriteStartAnimation (_Sprites ["rainbowDiamond"], "spinningdiamond");
 
@@ -247,36 +248,49 @@ namespace MyGame
 			SwinGame.DrawTextLines ("Developed by: Agile Crocodile", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 570, 612, 300, 100);
 		}
 
-		public static void DrawEndGame(Board myBoard)
-		{
-			SwinGame.DrawBitmapOnScreen (_gameBackground, 0 ,0);
-			if (myBoard.Score <= 300)
-			{
-				SwinGame.DrawTextLines ("Good!", Color.White, Color.Black, "maven_pro_regular", 50, FontAlignment.AlignCenter, 125, 160, 300, 100);
-			}
-			else if (myBoard.Score <= 500)
-			{
-				SwinGame.DrawTextLines ("Very Good!", Color.White, Color.Black, "maven_pro_regular", 50, FontAlignment.AlignCenter, 125, 160, 300, 100);
-			}
-			else if (myBoard.Score <= 750)
-			{
-				SwinGame.DrawTextLines ("Excellent!", Color.White, Color.Black, "maven_pro_regular", 50, FontAlignment.AlignCenter, 125, 160, 300, 100);
-			}
-			else
-			{
-				SwinGame.DrawTextLines ("Outstanding!", Color.White, Color.Black, "maven_pro_regular", 50, FontAlignment.AlignCenter, 125, 160, 300, 100);
-			}
+		public static void DrawRanking(){
+			SwinGame.DrawBitmapOnScreen (_gameBackground, 0, 0);
+			SwinGame.FillRectangle (SwinGame.RGBAColor (0, 0, 0, 200), 0, 0, 750, 630);
 
-			SwinGame.DrawTextLines ("You scored:" + myBoard.Score + "!", Color.White, Color.Black, "maven_pro_regular", 15, FontAlignment.AlignCenter, 125, 230, 300, 100);
+			SwinGame.FillRectangle (SwinGame.RGBAColor (0, 0, 0, 200), 0, 0, 750, 30);
+			SwinGame.DrawTextLines ("Swinburne University of Technology Sarawak", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 12, 12, 300, 100);
+
+			SwinGame.DrawBitmapOnScreen (_Images["ranking"], 245 ,55);
+
+			SwinGame.DrawBitmapOnScreen (_Images ["button"], 280, 500);
+			SwinGame.DrawTextLines ("Back", SwinGame.RGBColor (51, 102, 0), SwinGame.RGBAColor (0, 0, 0, 0), "mavenbold", 20, FontAlignment.AlignCenter, 280, 535, 200, 100);
+
+		}
+
+		public static void DrawEndGame(){
+			SwinGame.DrawBitmapOnScreen (_gameBackground, 0, 0);
+			SwinGame.FillRectangle (SwinGame.RGBAColor (0, 0, 0, 200), 0, 0, 750, 630);
+
+			SwinGame.FillRectangle (SwinGame.RGBAColor (0, 0, 0, 200), 0, 0, 750, 30);
+			SwinGame.DrawTextLines ("Swinburne University of Technology Sarawak", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 12, 12, 300, 100);
+
+			SwinGame.DrawBitmapOnScreen (_Images["ranking"], 245 ,55);
+
+		}
+
+		public static void DrawEndRanking(){
+
+			SwinGame.DrawBitmapOnScreen (_gameBackground, 0, 0);
+			SwinGame.FillRectangle (SwinGame.RGBAColor (0, 0, 0, 200), 0, 0, 750, 630);
+
+			SwinGame.FillRectangle (SwinGame.RGBAColor (0, 0, 0, 200), 0, 0, 750, 30);
+			SwinGame.DrawTextLines ("Swinburne University of Technology Sarawak", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 12, 12, 300, 100);
+
+			SwinGame.DrawBitmapOnScreen (_Images["ranking"], 245 ,55);
 
 
-			SwinGame.FillRectangle (Color.White, 220, 295, 108, 48);
-			SwinGame.FillRectangle (Color.CornflowerBlue, 224, 299, 100, 40);
-			SwinGame.DrawText ("Play again", Color.Black, 235, 315);
+			SwinGame.DrawBitmapOnScreen(_Images["button"], 60, 500);
+			SwinGame.DrawTextLines ("Menu", SwinGame.RGBColor (51, 102, 0), SwinGame.RGBAColor (0, 0, 0, 0), "mavenbold", 20,FontAlignment.AlignCenter, 115, 535, 100, 100);
 
-			SwinGame.FillRectangle (Color.White, 220, 416, 108, 48);
-			SwinGame.FillRectangle (Color.CornflowerBlue, 224, 420, 100, 40);
-			SwinGame.DrawText ("Quit", Color.Black, 258, 436);
+
+			SwinGame.DrawBitmapOnScreen(_Images["button"], 500, 500);
+			SwinGame.DrawTextLines ("Play Again",SwinGame.RGBColor (51, 102, 0), SwinGame.RGBAColor (0, 0, 0, 0), "mavenbold", 20, FontAlignment.AlignCenter, 550, 535, 100, 100);
+
 		}
 
 		public static void FreeResources()

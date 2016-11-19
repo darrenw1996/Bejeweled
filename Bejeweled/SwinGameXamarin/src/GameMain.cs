@@ -68,18 +68,38 @@ namespace MyGame
 					GameController.Board.GenerateBlock2 ();
 				}
 
-				//if the game ends, show the final score page
-				if (GameController.GameState == GameState.EndingGame || GameController.GameState == GameState.ViewingHighScore)
+				if (GameController.GameState == GameState.ViewingHighScore)
 				{
-					UIController.DrawEndGame (GameController.Board);
-
-					GameController.HandleUserInput ();
-					//GameController.HandleEndOfGameInput ();
+					UIController.DrawRanking ();
+					HighScore.DrawHighScores ();
+					GameController.HandleRankinginput ();
 				}
-                
+
+
+				//if the game ends, show the final score page
+				if (GameController.GameState == GameState.EndingGame)
+				{
+					UIController.DrawEndGame();
+					HighScore.ReadUserScore (GameController.Board.Score);
+
+
+					//GameController.HandleUserInput ();
+					//GameController.HandleEndOfGameInput ();
+
+					//HighScore.ReadUserScore (GameController.Board.Score);
+
+				}
+
+				if (GameController.GameState == GameState.EndingRanking)
+				{
+					UIController.DrawEndRanking();
+					HighScore.DrawHighScores ();
+					GameController.HandleEndOfGameInput ();
+				}
+
 				SwinGame.RefreshScreen(60);
 				SwinGame.UpdateAllSprites ();
-            }
+			}
 
 			UIController.FreeResources ();
         }

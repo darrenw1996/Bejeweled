@@ -9,7 +9,7 @@ namespace MyGame
 		ViewingHighScore,
 		PlayingGame,
 		EndingGame,
+		EndingRanking,
 		Quitting
 	}
 }
-
