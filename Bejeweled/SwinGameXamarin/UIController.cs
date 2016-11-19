@@ -24,7 +24,7 @@ namespace MyGame
 		private static Dictionary<string, Music> _Music = new Dictionary<string, Music> ();
 		private static uint timeTicks;
 		private static Timer gameTime = SwinGame.CreateTimer("timer");
-		private static int endTime = 5;
+		private static int endTime = 60;
 		private static bool isTimerPaused = false;
 
 		public static bool TimerPaused
