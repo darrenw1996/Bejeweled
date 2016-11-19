@@ -1,5 +1,10 @@
-﻿<Properties StartupItem="MyGame.csproj">
+﻿<Properties StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
+  <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="Board.cs">
     <Files>
       <File FileName="UIController.cs" Line="1" Column="1" />
@@ -7,12 +12,8 @@
       <File FileName="GreenBlock.cs" Line="1" Column="1" />
       <File FileName="BlueBlock.cs" Line="1" Column="1" />
       <File FileName="RainbowBlock.cs" Line="1" Column="1" />
-      <File FileName="Board.cs" Line="192" Column="3" />
+      <File FileName="Board.cs" Line="246" Column="8" />
       <File FileName="BlockFactory.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
