@@ -55,10 +55,13 @@ namespace MyGame
 					//Draw game board
 					GameController.Board.DrawBoard ();
 
+					SwinGame.StopMusic ();
+
 					//when time reaches 1 minute, show the final score page
 					if (UIController.TimeTicks >= UIController.EndTime)
 					{
 						GameController.GameState = GameState.EndingGame;
+						SwinGame.PlaySoundEffect (UIController.GameSound("endgame"));
 					}
 						
 					GameController.HandleUserInput ();

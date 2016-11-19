@@ -91,10 +91,12 @@ namespace MyGame
 				SwinGame.SpriteSetX (sprite, block.X-20);
 				SwinGame.SpriteSetY (sprite, block.Y-15);
 				_destroyedSprites.Add (sprite);
+
 			}
 
 			if (!sprite.AnimationHasEnded)
 			{
+				SwinGame.PlaySoundEffect (UIController.GameSound ("explosion"));
 				SwinGame.PauseTimer("timer");
 			}
 
@@ -206,55 +208,57 @@ namespace MyGame
 					if (_blocks [x, y] == firstSelected)
 					{
 						//if the first selected and second selected are neighbour blocks, swap them
-						if ((y >= 1 && _blocks[x, y-1] == secondSelected) || (y <= 7 && _blocks[x, y+1] == secondSelected) || ( x >= 1 && _blocks[x-1, y] == secondSelected)|| (x <= 7 && _blocks[x+1, y] == secondSelected))
-						{					
+						if ((y >= 1 && _blocks [x, y - 1] == secondSelected) || (y <= 7 && _blocks [x, y + 1] == secondSelected) || (x >= 1 && _blocks [x - 1, y] == secondSelected) || (x <= 7 && _blocks [x + 1, y] == secondSelected)) {
 							temp.Color = firstSelected.Color;
 							firstSelected.Color = secondSelected.Color;
 							secondSelected.Color = temp.Color;
 
-							/* JOSEPH - swap the diamond blocks animation*/
-							string sprt1 = "";
-							string sprt2 = "";
 
-							if (firstSelected.Color == Color.Red) {
-								sprt1 = "redDiamond";
-							} else if (firstSelected.Color == Color.Blue) {
-								sprt1 = "blueDiamond";
-							} else if (firstSelected.Color == Color.Green) {
-								sprt1 = "greenDiamond";
-							} else if (firstSelected.Color == Color.Yellow) {
-								sprt1 = "yellowDiamond";
-							} else if (firstSelected.Color == Color.White) {
-								sprt1 = "timerBlock";
-							} else if (firstSelected.Color == Color.MistyRose) {
-								sprt1 = "rainbowDiamond";
-							}
 
-							if (secondSelected.Color == Color.Red) {
-								sprt2 = "redDiamond";
-							} else if (secondSelected.Color == Color.Blue) {
-								sprt2 = "blueDiamond";
-							} else if (secondSelected.Color == Color.Green) {
-								sprt2 = "greenDiamond";
-							} else if (secondSelected.Color == Color.Yellow) {
-								sprt2 = "yellowDiamond";
-							} else if (secondSelected.Color == Color.White) {
-								sprt2 = "timerBlock";
-							} else if (secondSelected.Color == Color.MistyRose) {
-								sprt2 = "rainbowDiamond";
-							}
+								/* JOSEPH - swap the diamond blocks animation*/
+								string sprt1 = "";
+								string sprt2 = "";
 
-							if (sprt1 != "timerBlock" && sprt2 != "timerBlock") {
-								SwinGame.SpriteSetX (UIController.getSprite (sprt1), firstSelected.X + 10);
-								SwinGame.SpriteSetY (UIController.getSprite (sprt1), firstSelected.Y + 15);
-								SwinGame.DrawSprite (UIController.getSprite (sprt1));
-							}
+								if (firstSelected.Color == Color.Red) {
+									sprt1 = "redDiamond";
+								} else if (firstSelected.Color == Color.Blue) {
+									sprt1 = "blueDiamond";
+								} else if (firstSelected.Color == Color.Green) {
+									sprt1 = "greenDiamond";
+								} else if (firstSelected.Color == Color.Yellow) {
+									sprt1 = "yellowDiamond";
+								} else if (firstSelected.Color == Color.White) {
+									sprt1 = "timerBlock";
+								} else if (firstSelected.Color == Color.MistyRose) {
+									sprt1 = "rainbowDiamond";
+								}
 
-							if (sprt1 != "timerBlock" && sprt2 != "timerBlock") {
-								SwinGame.SpriteSetX (UIController.getSprite (sprt2), secondSelected.X + 10);
-								SwinGame.SpriteSetY (UIController.getSprite (sprt2), secondSelected.Y + 15);
-								SwinGame.DrawSprite (UIController.getSprite (sprt2));
-							}
+								if (secondSelected.Color == Color.Red) {
+									sprt2 = "redDiamond";
+								} else if (secondSelected.Color == Color.Blue) {
+									sprt2 = "blueDiamond";
+								} else if (secondSelected.Color == Color.Green) {
+									sprt2 = "greenDiamond";
+								} else if (secondSelected.Color == Color.Yellow) {
+									sprt2 = "yellowDiamond";
+								} else if (secondSelected.Color == Color.White) {
+									sprt2 = "timerBlock";
+								} else if (secondSelected.Color == Color.MistyRose) {
+									sprt2 = "rainbowDiamond";
+								}
+
+								if (sprt1 != "timerBlock" && sprt2 != "timerBlock") {
+									SwinGame.SpriteSetX (UIController.getSprite (sprt1), firstSelected.X + 10);
+									SwinGame.SpriteSetY (UIController.getSprite (sprt1), firstSelected.Y + 15);
+									SwinGame.DrawSprite (UIController.getSprite (sprt1));
+								}
+
+								if (sprt1 != "timerBlock" && sprt2 != "timerBlock") {
+									SwinGame.SpriteSetX (UIController.getSprite (sprt2), secondSelected.X + 10);
+									SwinGame.SpriteSetY (UIController.getSprite (sprt2), secondSelected.Y + 15);
+									SwinGame.DrawSprite (UIController.getSprite (sprt2));
+								}
+
 						}
 					}
 				}

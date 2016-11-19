@@ -71,7 +71,7 @@ namespace MyGame
 					//start the game and timer
 					gameState = GameState.PlayingGame;
 					SwinGame.StartTimer (UIController.gameTimer);
-
+					SwinGame.PlaySoundEffect (UIController.GameSound ("startgame"));
 				}
 				else if (SwinGame.PointInRect (SwinGame.MousePosition (), 253, 302, 261, 59))
 				{
@@ -116,6 +116,10 @@ namespace MyGame
 				myBoard.SelectBlockAt (SwinGame.MousePosition ());
 				firstSelected = myBoard.SelectedBlock;
 
+				if (firstSelected != null) {
+					SwinGame.PlaySoundEffect (UIController.GameSound ("leftclick"));
+				}
+
 				if (SwinGame.PointInRect (SwinGame.MousePosition (), 565, 400, 160, 71))	//menu button
 				{
 					//Go back to the game menu page
@@ -143,12 +147,26 @@ namespace MyGame
 			{
 				myBoard.SelectBlockAt (SwinGame.MousePosition ());
 				secondSelected = myBoard.SelectedBlock;
+
+				if (secondSelected != null) {
+					SwinGame.PlaySoundEffect (UIController.GameSound ("rightclick"));
+				}
 			}
 
 			//Swap the selected blocks
 			if (firstSelected != null && secondSelected != null)
 			{
 				myBoard.Swap (firstSelected, secondSelected);
+
+				if (myBoard.CheckMatching() == true)
+					SwinGame.PlaySoundEffect (UIController.GameSound ("match"));
+				if (myBoard.CheckMatching () == false) {
+					myBoard.Swap (firstSelected, secondSelected);
+					SwinGame.PlaySoundEffect (UIController.GameSound ("errormatch"));
+					firstSelected = null;
+					secondSelected = null;
+				}
+
 			}
 
 			//if there is matching of blocks in the board, check the matching, else swap the blocks back to original places
@@ -160,7 +178,7 @@ namespace MyGame
 			}
 			else
 			{
-				myBoard.Swap (firstSelected, secondSelected);	
+				myBoard.Swap (firstSelected, secondSelected);
 			}
 
 		}
