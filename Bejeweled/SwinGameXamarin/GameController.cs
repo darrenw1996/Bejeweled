@@ -76,17 +76,21 @@ namespace MyGame
 				else if (SwinGame.PointInRect (SwinGame.MousePosition (), 253, 302, 261, 59))
 				{
 					//show the instructions
+					SwinGame.PlaySoundEffect (UIController.GameSound ("button"));
 					gameState = GameState.ViewingGameInstruction;
 				} 
 				else if (SwinGame.PointInRect (SwinGame.MousePosition (), 253, 375, 261, 59))
 				{
 					//quit the game
+					SwinGame.PlaySoundEffect (UIController.GameSound ("button"));
 					gameState = GameState.ViewingHighScore;
 					//break;
 				}
 				else if (SwinGame.PointInRect (SwinGame.MousePosition (), 253, 449, 261, 59))
 				{
 					//quit the game
+					SwinGame.PlaySoundEffect (UIController.GameSound ("button"));
+					SwinGame.Delay (300);
 					gameState = GameState.Quitting;
 					//break;
 				}
@@ -123,20 +127,25 @@ namespace MyGame
 				if (SwinGame.PointInRect (SwinGame.MousePosition (), 565, 400, 160, 71))	//menu button
 				{
 					//Go back to the game menu page
+					SwinGame.PlaySoundEffect (UIController.GameSound ("button"));
 					gameState = GameState.ViewingGameMenu;
 				}
 				else if (SwinGame.PointInRect (SwinGame.MousePosition (), 565, 480, 160, 71))	//exit button
 				{
+					SwinGame.PlaySoundEffect (UIController.GameSound ("button"));
+					SwinGame.Delay (300);
 					gameState = GameState.Quitting;
 				} else if(SwinGame.PointInRect (SwinGame.MousePosition (), 565, 320, 160, 71))
 				{
 					if (!UIController.TimerPaused)
 					{
+						SwinGame.PlaySoundEffect (UIController.GameSound ("button"));
 						SwinGame.PauseTimer ("timer");
 						UIController.TimerPaused = true;
 					}
 					else
 					{
+						SwinGame.PlaySoundEffect (UIController.GameSound ("button"));
 						SwinGame.ResumeTimer ("timer");
 						UIController.TimerPaused = false;
 					}
@@ -190,6 +199,7 @@ namespace MyGame
 				if (SwinGame.PointInRect (SwinGame.MousePosition (), 280, 500, 200, 99))
 				{
 					//Go back to the game menu page
+					SwinGame.PlaySoundEffect (UIController.GameSound ("button"));
 					gameState = GameState.ViewingGameMenu;
 				}
 			}
@@ -201,6 +211,7 @@ namespace MyGame
 				if (SwinGame.PointInRect (SwinGame.MousePosition (), 280, 500, 200, 99))
 				{
 					//Go back to the game menu page
+					SwinGame.PlaySoundEffect (UIController.GameSound ("button"));
 					gameState = GameState.ViewingGameMenu;
 				}
 			}
@@ -224,6 +235,7 @@ namespace MyGame
 					//	myBoard.CheckMatching ();
 					//	myBoard.GenerateBlock ();
 					//}
+					SwinGame.PlaySoundEffect (UIController.GameSound ("button"));
 					SwinGame.ResetTimer (UIController.gameTimer);
 					myBoard.Score = 0;
 					UIController.EndTime = 60;
@@ -231,6 +243,7 @@ namespace MyGame
 				}
 				else if (SwinGame.PointInRect (SwinGame.MousePosition (), 60, 500, 200, 99))
 				{
+					SwinGame.PlaySoundEffect (UIController.GameSound ("button"));
 					gameState = GameState.ViewingGameMenu;
 				}
 			}

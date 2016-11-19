@@ -19,6 +19,7 @@ namespace MyGame
 		private static SoundEffect _explosion;
 		private static SoundEffect _startGame;
 		private static SoundEffect _endGame;
+		private static SoundEffect _button;
 		private static Dictionary<string, SoundEffect> _Sounds = new Dictionary<string, SoundEffect> ();
 		private static Dictionary<string, Music> _Music = new Dictionary<string, Music> ();
 		private static uint timeTicks;
@@ -116,6 +117,7 @@ namespace MyGame
 			_explosion = SwinGame.LoadSoundEffect ("explosion.wav");
 			_startGame = SwinGame.LoadSoundEffect ("start_game.wav");
 			_endGame = SwinGame.LoadSoundEffect ("end_game.ogg");
+			_button = SwinGame.LoadSoundEffect ("button.wav");
 
 			_Sounds.Add ("match", SwinGame.LoadSoundEffect ("match_sound.wav"));
 			_Sounds.Add ("errormatch", SwinGame.LoadSoundEffect ("error_match_sound.wav"));
@@ -124,6 +126,7 @@ namespace MyGame
 			_Sounds.Add ("explosion", SwinGame.LoadSoundEffect ("explosion.wav"));
 			_Sounds.Add ("startgame", SwinGame.LoadSoundEffect ("start_game.wav"));
 			_Sounds.Add ("endgame", SwinGame.LoadSoundEffect ("end_game.ogg"));
+			_Sounds.Add ("button", SwinGame.LoadSoundEffect ("button.wav"));
 		}
 
 		private static void LoadMusic ()
