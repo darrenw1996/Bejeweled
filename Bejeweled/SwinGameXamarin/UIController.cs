@@ -12,6 +12,15 @@ namespace MyGame
 		private static Bitmap _gamePanel;
 		private static Bitmap _boxPanel;
 		private static Dictionary<string, Bitmap> _Images = new Dictionary<string, Bitmap> (); 
+		private static SoundEffect _matchSound;
+		private static SoundEffect _errorMatchSound;
+		private static SoundEffect _leftClick;
+		private static SoundEffect _rightClick;
+		private static SoundEffect _explosion;
+		private static SoundEffect _startGame;
+		private static SoundEffect _endGame;
+		private static Dictionary<string, SoundEffect> _Sounds = new Dictionary<string, SoundEffect> ();
+		private static Dictionary<string, Music> _Music = new Dictionary<string, Music> ();
 		private static uint timeTicks;
 		private static Timer gameTime = SwinGame.CreateTimer("timer");
 		private static int endTime = 60;
@@ -96,11 +105,48 @@ namespace MyGame
 
 		}
 
+		/* JOSEPH - load sound files */
+		private static void LoadSounds () 
+		{
+			_matchSound = SwinGame.LoadSoundEffect ("match_sound.wav");
+			_errorMatchSound = SwinGame.LoadSoundEffect ("error_match_sound.wav");
+			_leftClick = SwinGame.LoadSoundEffect ("left_click.wav");
+			_rightClick = SwinGame.LoadSoundEffect ("right_click.wav");
+			_explosion = SwinGame.LoadSoundEffect ("explosion.wav");
+			_startGame = SwinGame.LoadSoundEffect ("start_game.wav");
+			_endGame = SwinGame.LoadSoundEffect ("end_game.ogg");
+
+			_Sounds.Add ("match", SwinGame.LoadSoundEffect ("match_sound.wav"));
+			_Sounds.Add ("errormatch", SwinGame.LoadSoundEffect ("error_match_sound.wav"));
+			_Sounds.Add ("leftclick", SwinGame.LoadSoundEffect ("left_click.wav"));
+			_Sounds.Add ("rightclick", SwinGame.LoadSoundEffect ("right_click.wav"));
+			_Sounds.Add ("explosion", SwinGame.LoadSoundEffect ("explosion.wav"));
+			_Sounds.Add ("startgame", SwinGame.LoadSoundEffect ("start_game.wav"));
+			_Sounds.Add ("endgame", SwinGame.LoadSoundEffect ("end_game.ogg"));
+		}
+
+		private static void LoadMusic ()
+		{
+			_Music.Add ("Background", Audio.LoadMusic ("background3.mp3"));
+		}
+
 		public static void LoadResources()
 		{
 			LoadBundles ();
 			LoadSprites ();
 			LoadImages ();
+			LoadSounds ();
+			LoadMusic ();
+		}
+
+		public static SoundEffect GameSound (string sound)
+		{
+			return _Sounds [sound];
+		}
+
+		public static Music GameMusic (string music)
+		{
+			return _Music [music];
 		}
 
 		public static void DrawGameBoard(Board myBoard,ColorBlock[,] _blocks)
@@ -238,6 +284,12 @@ namespace MyGame
 			foreach (Sprite s in _Sprites.Values)
 			{
 				SwinGame.FreeSprite (s);
+			}
+			foreach (SoundEffect sd in _Sounds.Values) {
+				SwinGame.FreeSoundEffect (sd);
+			}
+			foreach (Music m in _Music.Values) {
+				SwinGame.FreeMusic (m);
 			}
 			SwinGame.ReleaseResourceBundle ("destroyedbundle.txt");
 			SwinGame.ReleaseResourceBundle ("diamondbundle.txt");

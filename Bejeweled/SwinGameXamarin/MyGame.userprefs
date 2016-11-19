@@ -5,15 +5,15 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Board.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UIController.cs">
     <Files>
-      <File FileName="UIController.cs" Line="1" Column="1" />
-      <File FileName="src\GameMain.cs" Line="1" Column="1" />
-      <File FileName="GreenBlock.cs" Line="1" Column="1" />
+      <File FileName="src\GameMain.cs" Line="30" Column="32" />
+      <File FileName="UIController.cs" Line="58" Column="34" />
+      <File FileName="Board.cs" Line="286" Column="7" />
+      <File FileName="GreenBlock.cs" Line="6" Column="18" />
       <File FileName="BlueBlock.cs" Line="1" Column="1" />
       <File FileName="RainbowBlock.cs" Line="1" Column="1" />
-      <File FileName="Board.cs" Line="246" Column="8" />
-      <File FileName="BlockFactory.cs" Line="1" Column="1" />
+      <File FileName="BlockFactory.cs" Line="14" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>

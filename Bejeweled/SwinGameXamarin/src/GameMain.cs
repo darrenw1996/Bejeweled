@@ -12,6 +12,8 @@ namespace MyGame
 			SwinGame.OpenGraphicsWindow("Bejeweled", 750, 630); //549, 700
 			UIController.LoadResources ();
 
+			SwinGame.PlayMusic (UIController.GameMusic ("Background"));
+
 			//generate blocks for the board
 			GameController.Board.GenerateBlock ();
 

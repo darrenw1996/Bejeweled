@@ -297,8 +297,6 @@ C:\Users\User\Bejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\Fil
 C:\Users\User\Bejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\Swinburne.jpg
 C:\Users\User\Bejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\images\SwinGameAni.png
 C:\Users\User\Bejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\panels\FileDialog.txt
-C:\Users\User\Bejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\sounds\error.wav
-C:\Users\User\Bejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\sounds\SwinGameStart.wav
 C:\Users\User\Bejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\SwinGame.icns
 C:\Users\User\Bejeweled\Bejeweled\SwinGameXamarin\bin\Debug\Resources\SwinGame.ico
 C:\Users\User\Bejeweled\Bejeweled\SwinGameXamarin\bin\Debug\MyGame.exe
