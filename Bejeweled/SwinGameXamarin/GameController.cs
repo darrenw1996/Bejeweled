@@ -40,6 +40,22 @@ namespace MyGame
 			secondSelected = null;
 		}
 
+		public static void RestartGame()
+		{
+			myBoard = new Board ();
+			GameController.Board.GenerateBlock ();
+
+			while (GameController.Board.CheckMatching ())
+			{
+				GameController.Board.CheckMatching ();
+				GameController.Board.GenerateBlock ();
+			}
+
+			GameController.Board.Score = 0;
+			UIController.EndTime = 60;
+			UIController.TimerPaused = false;
+		}
+
 		public static void HandleUserInput()
 		{
 			HandleShortcutKey ();
@@ -70,7 +86,9 @@ namespace MyGame
 				{
 					//start the game and timer
 					gameState = GameState.PlayingGame;
+					RestartGame ();
 					SwinGame.StartTimer (UIController.gameTimer);
+
 					SwinGame.PlaySoundEffect (UIController.GameSound ("startgame"));
 				}
 				else if (SwinGame.PointInRect (SwinGame.MousePosition (), 253, 302, 261, 59))
