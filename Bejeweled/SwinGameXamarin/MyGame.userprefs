@@ -1,22 +1,24 @@
-﻿<Properties StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default">
+﻿<Properties StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default" StartupItem="MyGame.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
-  <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="UIController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Board.cs">
     <Files>
-      <File FileName="src\GameMain.cs" Line="77" Column="5" />
-      <File FileName="UIController.cs" Line="27" Column="34" />
-      <File FileName="Board.cs" Line="286" Column="7" />
-      <File FileName="GreenBlock.cs" Line="23" Column="5" />
-      <File FileName="BlueBlock.cs" Line="1" Column="1" />
-      <File FileName="RainbowBlock.cs" Line="1" Column="1" />
-      <File FileName="BlockFactory.cs" Line="14" Column="24" />
-      <File FileName="HighScore.cs" Line="183" Column="20" />
-      <File FileName="GameState.cs" Line="15" Column="2" />
-      <File FileName="GameController.cs" Line="98" Column="4" />
+      <File FileName="GameController.cs" Line="276" Column="46" />
+      <File FileName="UIController.cs" Line="101" Column="4" />
+      <File FileName="TestBoard.cs" Line="148" Column="26" />
+      <File FileName="YellowBlock.cs" Line="16" Column="21" />
+      <File FileName="Board.cs" Line="377" Column="8" />
     </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="MyGame" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

@@ -211,6 +211,7 @@ namespace MyGame
 
 			SwinGame.FillRectangle(SwinGame.RGBAColor (0, 0, 0, 200), 0, 0, 750, 30);
 			SwinGame.DrawTextLines ("Swinburne University of Technology Sarawak", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 12, 12, 300, 100);
+			SwinGame.DrawTextLines ("SWE20001 Development Project 1 - Tools and Practices", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 420, 12, 400, 100);
 
 			SwinGame.DrawTextLines ("Play", SwinGame.RGBColor (51, 102, 0), SwinGame.RGBAColor (0, 0, 0, 0), "mavenbold", 20, FontAlignment.AlignCenter, 282, 242, 200, 100);
 			SwinGame.DrawTextLines ("Instruction", SwinGame.RGBColor (51, 102, 0), SwinGame.RGBAColor (0, 0, 0, 0), "mavenbold", 20, FontAlignment.AlignCenter, 285, 318, 200, 100);
@@ -218,8 +219,8 @@ namespace MyGame
 			SwinGame.DrawTextLines ("Quit", SwinGame.RGBColor (51, 102, 0), SwinGame.RGBAColor (0, 0, 0, 0), "mavenbold", 20, FontAlignment.AlignCenter, 285, 465, 200, 100);
 
 			SwinGame.FillRectangle(SwinGame.RGBAColor (0, 0, 0, 200), 0, 610, 750, 30);
-			SwinGame.DrawTextLines ("SWE20001 Development Project 1 - Tools and Practices", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 12, 612, 400, 100);
-			SwinGame.DrawTextLines ("Developed by: Agile Crocodile", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 570, 612, 300, 100);
+
+			SwinGame.DrawTextLines ("Developed by: Agile Crocodile (Sharon Lo Ying Ying, Darren Wong Siew Ding, Joseph Sim Wei Min)", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 12, 612,600, 100);
 		}
 
 		public static void DrawInstructionPage()
@@ -230,6 +231,7 @@ namespace MyGame
 
 			SwinGame.FillRectangle(SwinGame.RGBAColor (0, 0, 0, 200), 0, 0, 750, 30);
 			SwinGame.DrawTextLines ("Swinburne University of Technology Sarawak", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 12, 12, 300, 100);
+			SwinGame.DrawTextLines ("SWE20001 Development Project 1 - Tools and Practices", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 420, 12, 400, 100);
 
 			SwinGame.DrawBitmapOnScreen (_Images["instruction"], 180 ,55);
 
@@ -247,8 +249,8 @@ namespace MyGame
 			SwinGame.DrawTextLines ("Back", SwinGame.RGBColor (51, 102, 0), SwinGame.RGBAColor (0, 0, 0, 0), "mavenbold", 20, FontAlignment.AlignCenter, 280, 535, 200, 100);
 
 			SwinGame.FillRectangle(SwinGame.RGBAColor (0, 0, 0, 200), 0, 610, 750, 30);
-			SwinGame.DrawTextLines ("SWE20001 Development Project 1 - Tools and Practices", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 12, 612, 400, 100);
-			SwinGame.DrawTextLines ("Developed by: Agile Crocodile", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 570, 612, 300, 100);
+			//SwinGame.DrawTextLines ("SWE20001 Development Project 1 - Tools and Practices", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 12, 612, 400, 100);
+			SwinGame.DrawTextLines ("Developed by: Agile Crocodile (Sharon Lo Ying Ying, Darren Wong Siew Ding, Joseph Sim Wei Min)", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 12, 612,600, 100);
 		}
 
 		public static void DrawRanking(){
@@ -257,12 +259,13 @@ namespace MyGame
 
 			SwinGame.FillRectangle (SwinGame.RGBAColor (0, 0, 0, 200), 0, 0, 750, 30);
 			SwinGame.DrawTextLines ("Swinburne University of Technology Sarawak", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 12, 12, 300, 100);
+			SwinGame.DrawTextLines ("SWE20001 Development Project 1 - Tools and Practices", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 420, 12, 400, 100);
 
 			SwinGame.DrawBitmapOnScreen (_Images["ranking"], 245 ,55);
 
 			SwinGame.DrawBitmapOnScreen (_Images ["button"], 280, 500);
 			SwinGame.DrawTextLines ("Back", SwinGame.RGBColor (51, 102, 0), SwinGame.RGBAColor (0, 0, 0, 0), "mavenbold", 20, FontAlignment.AlignCenter, 280, 535, 200, 100);
-
+			SwinGame.DrawTextLines ("Developed by: Agile Crocodile (Sharon Lo Ying Ying, Darren Wong Siew Ding, Joseph Sim Wei Min)", Color.White, SwinGame.RGBAColor (0, 0, 0, 0), "maven_pro_regular", 12, FontAlignment.AlignLeft, 12, 612,600, 100);
 		}
 
 		public static void DrawEndGame(){

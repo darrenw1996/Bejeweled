@@ -144,6 +144,12 @@ namespace MyGame
 			Assert.AreEqual (Color.Blue, blue.Color);
 		}
 
+		[Test()]
+		public void TestAddTime()
+		{
+			
+		}
+
 		/*[Test()]
 		public void TestCalScore()
 		{
