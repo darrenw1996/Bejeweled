@@ -361,14 +361,14 @@ namespace MyGame
 
 					if (startCheck)
 					{
-						if (match == 5)
+						if (match == 4)
 						{
 							if (!rainbowClusters.Contains (_blocks [y, x]))
 							{
 								rainbowClusters.Add (_blocks [y, x]);
 							}
 
-						} else if (match == 4)
+						} else if (match == 5)
 						{
 							if (!timerClusters.Contains (_blocks [y, x]))
 							{
